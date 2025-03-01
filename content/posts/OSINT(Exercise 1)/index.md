@@ -1,9 +1,9 @@
 ---
 title: "OSINT(Exercise 1)"
 date: 2025-03-01
-description: This is a writeup on OSINT EXERCISE 1 from Sofia Santo's OSINT analysis and exercises.
+description: This is a writeup on OSINT EXERCISE 1 from Sofia Santos' OSINT analysis and exercises.
 draft: false # this section allows the post to be published and be public, is it is set to true the post will not be published.
-summary: "[credit to Sofia Santo](https://gralhix.com/)" # Here you can write a small summary of the post if needed
+summary: "[credit to Sofia Santoz\s](https://gralhix.com/)" # Here you can write a small summary of the post if needed
 tags: [GEOINT ]
 categories: [OSINT, GEOINT]
 ---
