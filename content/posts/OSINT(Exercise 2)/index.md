@@ -90,7 +90,7 @@ zooming closer, we are able to find the name of the building as shown below.
 
 ![image.png](image%209.png)
 
-searching it on google maps as central equity melbourne as the area is in melbourne australia we get this apartment.
+searching it on google maps as central equity Melbourne as the area is in Melbourne Australia we get this apartment.
 
 ![image.png](image%2010.png)
 
