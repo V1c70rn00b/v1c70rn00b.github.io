@@ -5,7 +5,7 @@ description: This is a writeup on OSINT EXERCISE 1 from Sofia Santos' OSINT anal
 draft: false # this section allows the post to be published and be public, is it is set to true the post will not be published.
 summary: "[credit to Sofia Santos](https://gralhix.com/)" # Here you can write a small summary of the post if needed
 tags: [GEOINT ]
-categories: [OSINT, GEOINT]
+categories: [OSINT]
 ---
 
 # OSINT (Exercise 1)
