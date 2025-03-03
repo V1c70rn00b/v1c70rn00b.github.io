@@ -1,5 +1,5 @@
 ---
-title: "OSINT(Exercise 1)"
+title: "OSINT(Exercise 3)"
 date: 2025-03-03
 description: This is a writeup on OSINT EXERCISE 3 from Sofia Santos' OSINT analysis and exercises.
 draft: false # this section allows the post to be published and be public, is it is set to true the post will not be published.
