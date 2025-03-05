@@ -51,7 +51,7 @@ For this section we are required to search for the co-ordinates of the resort, t
 
 ![image.png](image%204.png)
 
-`Answer: 7.363615897938734, 151.7562114158867` 
+`Answer: 7°21'49.0"N 151°45'22.4"E` 
 
 ## Cardinal direction  the camera was facing when the photo was taken.
 
