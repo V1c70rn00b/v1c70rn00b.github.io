@@ -85,4 +85,4 @@ As shown above the bears were lying close to the area with less grass on the edg
 
 From the image above we can now find the exact coordinates of where the bears were lying.
 
-`Answer: **32°44'03.9"N 117°09'16.6"W`**
+`Answer: 32°44'03.9"N 117°09'16.6"W`
