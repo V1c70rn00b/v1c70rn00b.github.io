@@ -91,4 +91,4 @@ Below is an image showing the coordinates.
 
 ![image.png](image%2014.png)
 
-`Answer: **47°00'57.6"N 28°51'14.1"E**`
+`Answer: 47°00'57.6"N 28°51'14.1"E`
