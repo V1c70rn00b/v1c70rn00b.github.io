@@ -9,7 +9,7 @@ categories: [OSINT]
 ---
 # OSINT(Exercise 15)
 
-For this challenge we are given a picture giving a description of a telescope we have to find it and locate where it is placed as described in the task briefing below.
+For this [challenge](https://gralhix.com/list-of-osint-exercises/osint-exercise-015/) we are given a picture giving a description of a telescope we have to find it and locate where it is placed as described in the task briefing below.
 
 ```jsx
 The image below is a screenshot taken from a CIA declassified 
