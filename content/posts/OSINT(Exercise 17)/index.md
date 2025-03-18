@@ -18,7 +18,7 @@ Below you will find three news articles from countries that have not
 adopted the Gregorian calendar.
 
 Your task is to find out when the articles were published, according to the Gregorian calendar.
-1 1. “ኢትዮጵያዊው አትሌት የቶኪዮ ማራቶን ባለድል ሆኗል !” 
+  1. “ኢትዮጵያዊው አትሌት የቶኪዮ ማራቶን ባለድል ሆኗል !” 
   2. “प्रहरीमा ५ हजार ४४४ जनाका लागि भर्ना खुल्यो”
   3. “در پنجمین شب جشنواره موسیقی فجر کدام گروه‌ها پا به صحنه می‌گذارند؟”
 ```
