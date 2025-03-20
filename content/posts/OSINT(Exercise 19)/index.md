@@ -27,6 +27,7 @@ This found information is sufficient enough for us to search online and find the
 As seen above from the identified countries, after going through the countries, Belgium stood out for me as it is near a water body unlike the others apart from Germany but Germany was also ruled out as it speaks German as a national language, however, from Belgium I was able to identify three cities as shown below.
 ![](Pasted%20image%2020250320135519.png)
 `Ghent,Bruges and antwerp`
+
 From this three cities, I checked the three cities with water bodies that are connecting to the large water body and found two to be of interest to me as shown below.
 ![](Pasted%20image%2020250320142904.png)
 Now on to measuring the distance form the cities to the water bodies, Ghent was close to the described distance in the transcript as shown below.
