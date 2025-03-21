@@ -1,6 +1,6 @@
 ---
 title: "OSINT(Exercise 20)"
-date: 2025-03-20
+date: 2025-03-21
 description: This is a writeup on OSINT EXERCISE 20 from Sofia Santos' OSINT analysis and exercises.
 draft: false # this section allows the post to be published and be public, is it is set to true the post will not be published.
 summary: "credit to Sofia Santos" # Here you can write a small summary of the post if needed
@@ -32,7 +32,7 @@ b) The Frequently Asked Questions page.
 c) The list of members of the management team in July.
 ```
 
-# The frequently asked question page
+## The frequently asked question page
 We shall still use the wayback machine to find the website x.com and search for the FAQ page.
 From the task briefing, we are required to go to the year `2000`.  As we look at the site map section, we have different elements as shown below.
 
@@ -55,7 +55,7 @@ Clicking on the snapshot of `March 4, 2000`, we are redirected to the page shown
 ![](Pasted%20image%2020250321135853.png)
 
 
-# The list of members of the management team in July
+## The list of members of the management team in July
 For this section I searched under the URLs section for management but I was unable to find a page on the year 2000, but after modifying my search to search for about as shown below, I was able to find our page.
 
 ![](Pasted%20image%2020250321143829.png)
