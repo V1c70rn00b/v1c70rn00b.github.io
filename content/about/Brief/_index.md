@@ -1,9 +1,9 @@
 ---
-title: "About me"
+title: "Intro"
 description: "A little about me"
 date: 2024-07-30
 draft: false
-summary: "portfolio"
+summary: "Hello Friend."
 ---
 
 ## ~/Whoami 
@@ -19,21 +19,21 @@ I have learned that security isn’t just about defense; it’s about knowing wh
 ### Issued by [TryHackMe](https://www.linkedin.com/company/tryhackme/).
 
 #### 2024
-- 🎯 SOC Level 2 learning path
-- 🎯 SOC Level 1 learning path
-- 🎯 Cyber Defense learning path
-- 🎯 DevSecOps learning path
-- 🎯 Offensive Pentesting learning path
-- 🎯 Security Engineer learning path
+- 🎯 [SOC Level 2 learning path](https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-U35L1RUJLA.pdf).
+- 🎯 [SOC Level 1 learning path](https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-RVDALP8HYF.pdf)
+- 🎯 [Cyber Defense learning path](https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-S4JTX2A79Y.pdf)
+- 🎯 [DevSecOps learning path](https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-D2HTPTRU9X.pdf)
+- 🎯 [Offensive Pentesting learning path](https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-KPPWA0FKJ2.pdf)
+- 🎯 [Security Engineer learning path](https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-VYP8BL2ZCM.pdf)
   
 #### 2023
-- 🎯 CompTIA Pentest+ learning path
-- 🎯 Red Teaming learning path
-- 🎯 Web Fundamentals learning path
-- 🎯 Complete Beginner learning path
-- 🎯 Jr Penetration Tester learning path
-- 🎯 Pre Security learning path
-- 🎯 Introduction to Cyber Security
+- 🎯 [CompTIA Pentest+ learning path](https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-RVEJRNCOBD.pdf)
+- 🎯 [Red Teaming learning path](https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-4PHM5CCLAR.pdf)
+- 🎯 [Web Fundamentals learning path](https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-X0HXACESXI.pdf)
+- 🎯 [Complete Beginner learning path](https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-6SEYXMOJ3V.pdf)
+- 🎯 [Jr Penetration Tester learning path](https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-KFTPTFNWV0.pdf)
+- 🎯 [Pre Security learning path](https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-N7W7SUQXIM.pdf)
+- 🎯 [Introduction to Cyber Security](https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-F3M6ET3BRK.pdf)
 
 ### Issued by [Hack The Box](https://www.linkedin.com/company/hackthebox/)
 #### 2024
