@@ -19,7 +19,7 @@ I have learned that security isn’t just about defense; it’s about knowing wh
 ### Issued by [TryHackMe](https://www.linkedin.com/company/tryhackme/).
 
 #### 2024
-- 🎯 [SOC Level 2 learning path](https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-U35L1RUJLA.pdf).
+- 🎯 [SOC Level 2 learning path](https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-U35L1RUJLA.pdf)
 - 🎯 [SOC Level 1 learning path](https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-RVDALP8HYF.pdf)
 - 🎯 [Cyber Defense learning path](https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-S4JTX2A79Y.pdf)
 - 🎯 [DevSecOps learning path](https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-D2HTPTRU9X.pdf)
