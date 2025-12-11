@@ -24,9 +24,7 @@ title = "v1c70r_n00b'$ Blog ⚔︎⛊"
 ~ Elliot Alderson~
 
 """
-   bio = """Security Analyst || CTF player   
-
-Isaiah 6:8"""
+   bio = "Isaiah 6:8"
    links = [
 #     { email = "mailto:mwaivictor04@gmail.com" },
 #     { link = "https://link-to-some-website.com/" },

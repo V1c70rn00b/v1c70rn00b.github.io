@@ -16,16 +16,22 @@
   weight = 20
 
 [[main]]
-  name = "This is me"
+  name = "Small Bio"
   parent = "About"
   pageRef="about"
   weight = 20
 
 [[main]]
-  name = "More about me"
+  name = "Linkedin"
   parent = "About"
   url = "https://www.linkedin.com/in/victor-mwai/"
   weight = 10
+
+[[main]]
+  name = "Mentorship"
+  parent = "About"
+  pageRef="Mentorship"
+  weight = 30
 
 [[main]]
   name = "HTB"

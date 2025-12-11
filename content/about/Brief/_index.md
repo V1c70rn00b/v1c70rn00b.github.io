@@ -1,7 +1,7 @@
 ---
 title: "Intro"
 description: "A little about me"
-date: 2024-07-30
+date: 2024-08-30
 draft: false
 summary: "Hello Friend."
 ---
@@ -19,39 +19,29 @@ I have learned that security isn’t just about defense; it’s about knowing wh
 ### Issued by [TryHackMe](https://www.linkedin.com/company/tryhackme/).
 
 #### 2024
-- 🎯 [SOC Level 2 learning path](https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-U35L1RUJLA.pdf)
-- 🎯 [SOC Level 1 learning path](https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-RVDALP8HYF.pdf)
-- 🎯 [Cyber Defense learning path](https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-S4JTX2A79Y.pdf)
+
 - 🎯 [DevSecOps learning path](https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-D2HTPTRU9X.pdf)
-- 🎯 [Offensive Pentesting learning path](https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-KPPWA0FKJ2.pdf)
+
 - 🎯 [Security Engineer learning path](https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-VYP8BL2ZCM.pdf)
   
-#### 2023
-- 🎯 [CompTIA Pentest+ learning path](https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-RVEJRNCOBD.pdf)
-- 🎯 [Red Teaming learning path](https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-4PHM5CCLAR.pdf)
 - 🎯 [Web Fundamentals learning path](https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-X0HXACESXI.pdf)
 - 🎯 [Complete Beginner learning path](https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-6SEYXMOJ3V.pdf)
-- 🎯 [Jr Penetration Tester learning path](https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-KFTPTFNWV0.pdf)
+
 - 🎯 [Pre Security learning path](https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-N7W7SUQXIM.pdf)
 - 🎯 [Introduction to Cyber Security](https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-F3M6ET3BRK.pdf)
 
-### Issued by [Hack The Box](https://www.linkedin.com/company/hackthebox/)
-#### 2024
-- 🎯 P.O.O lab (mini-prolab)
-
-### Issued by [Belkasoft](https://www.linkedin.com/company/belkasoft/)
-#### 2025
-- 🎯Windows Forensics
-
 ### Issued by [Zscaler](https://www.linkedin.com/company/zscaler/)
+
 #### 2025 - 2028
 - 🎯 Zero Trust cyber Assosciate
 
 ### Issued by [Microsoft](https://www.linkedin.com/company/microsoft/)
+
 #### 2023
 - 🎯 Microsoft Certified: Azure Fundamentals
 
 ## ~/Skills
+
 ### Technical Skills
 - 🎯 Penetration testing
 - 🎯 Vulnerability Assessment
@@ -62,6 +52,36 @@ I have learned that security isn’t just about defense; it’s about knowing wh
 ### Soft Skills
 - 🔥Critical thinking
 - 🔥Communication skills 
+- 🔥Public Speaking
+- 🔥Pitching
+
+## ~/Projects
+
+
+*  {{< button href="#button" href="/categories/overthewire" >}}
+Linux navigation labs writeups
+{{< /button >}}
+
+-  {{< button href="#button" href="/tags/osint/" >}}
+OSINT labs writeups
+{{< /button >}}
+
+## ~/Professional Experience
+ 
+ {{<timeline>}}
+
+ {{< timelineItem  header="Information Technology Intern" badge="June 2024 – August 2024" subheader="Netcom IT Solutions, Nairobi, Kenya" >}}
+ 
+ - Assisted clients in troubleshooting Outlook accounts, both remotely and on-site, ensuring effective communication and issue resolution, allowing clients to have good communication channels.
+
+- Utilized AnyDesk for remote troubleshooting of client workstations, diagnosing and resolving technical issues efficiently, allowing clients to work efficiently with their laptops.
+
+- Conducted cybersecurity awareness training for clients, educating them on best practices to enhance their security posture.
+
+{{< /timelineItem >}}
+
+
+ {{</timeline>}}
 
 
 ## ~/Honours and awards
@@ -82,6 +102,8 @@ I have learned that security isn’t just about defense; it’s about knowing wh
 * 🏅 picoCTF 2023
     - We scooped positioin 42 in Africa in the 2023 picoCTF competiton organized by [picoCTF](https://www.linkedin.com/company/picoctf/).
 
+
+
 <iframe src="https://tryhackme.com/api/v2/badges/public-profile?userPublicId=1353127" style='border:none;'></iframe> 
  
 
@@ -93,6 +115,7 @@ I have learned that security isn’t just about defense; it’s about knowing wh
   * [x] `Open Source Intelligence`
   * [x] `Cloud`
   * [x] `Networking`
+  * [x] `Security Operations Centre`
   
 
 
