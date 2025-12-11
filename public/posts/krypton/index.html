@@ -1,0 +1,2726 @@
+<!doctype html>
+<html
+  lang="en"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="dark"
+  data-auto-appearance="true"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  
+    <meta http-equiv="content-language" content="en">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color">
+
+  
+  
+    <title>overthewire krypton war games &middot; v1c70r_n00b&#39;$ Blog ⚔︎⛊</title>
+    <meta name="title" content="overthewire krypton war games &middot; v1c70r_n00b&#39;$ Blog ⚔︎⛊">
+  
+
+  
+  
+    <meta name="description" content="overthewire wargames krypton series">
+  
+  
+    <meta name="keywords" content="krypton,linux,cryptography,">
+  
+  
+  
+  <link rel="canonical" href="http://localhost:1313/posts/krypton/">
+  
+
+  
+  
+    <meta name="author" content="V1c70r_n00b">
+  
+  
+    
+      
+        
+          <link href="https://github.com/V1c70rn00b" rel="me">
+        
+      
+    
+      
+        
+          <link href="https://medium.com/@V1c70r_n00b" rel="me">
+        
+      
+    
+      
+        
+          <link href="https://twitter.com/v1c70r_n00b" rel="me">
+        
+      
+    
+  
+
+  
+  <meta property="og:url" content="http://localhost:1313/posts/krypton/">
+  <meta property="og:site_name" content="v1c70r_n00b&#39;$ Blog ⚔︎⛊">
+  <meta property="og:title" content="overthewire krypton war games">
+  <meta property="og:description" content="This is a writeup on krypton from overthewire wargames.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-07-26T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-07-26T00:00:00+00:00">
+    <meta property="article:tag" content="Krypton">
+    <meta property="article:tag" content="Linux">
+    <meta property="article:tag" content="Cryptography">
+    <meta property="og:image" content="http://localhost:1313/posts/krypton/featured.png">
+
+  
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="http://localhost:1313/posts/krypton/featured.png">
+  <meta name="twitter:title" content="overthewire krypton war games">
+  <meta name="twitter:description" content="This is a writeup on krypton from overthewire wargames.">
+
+  
+  
+  
+  
+    
+      
+    
+  
+    
+  
+    
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/css/main.bundle.min.c3d5018081fbcdba89d02361054f16187fa7e39ebb6cec780e2736e95d7b6278cde2e3d98def3c20ae613a0b1098f5a9b11ad6320b21cc4a0bf8ec4ebc0b55cf.css"
+    integrity="sha512-w9UBgIH7zbqJ0CNhBU8WGH&#43;n4567bOx4Dic26V17YnjN4uPZje88IK5hOgsQmPWpsRrWMgshzEoL&#43;OxOvAtVzw==">
+
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/appearance.min.6f41174b3a05b680820fe08cadbfa5fb7a7ca347b76a0955cdc68b9d8aca1ce24f0547e138cea33bcc7904d551a90afcb1cc7f2d9fe8557075d501419046c08c.js"
+    integrity="sha512-b0EXSzoFtoCCD&#43;CMrb&#43;l&#43;3p8o0e3aglVzcaLnYrKHOJPBUfhOM6jO8x5BNVRqQr8scx/LZ/oVXB11QFBkEbAjA=="></script>
+  
+  
+  
+  
+  
+  
+    
+    <script src="/lib/zoom/zoom.min.umd.b4b722fcb5d42f34f52b30a92f3521b69f403ca9d96d0d6179eb537cb870f5d83fdf1fe836688d95d5c99fefbda4170487711006e56051fa67ea00da10521721.js" integrity="sha512-tLci/LXULzT1KzCpLzUhtp9APKnZbQ1heetTfLhw9dg/3x/oNmiNldXJn&#43;&#43;9pBcEh3EQBuVgUfpn6gDaEFIXIQ=="></script>
+  
+
+  
+  
+  
+    
+  
+  
+    
+  
+  
+  
+  
+  
+  
+  
+    
+    <script
+      defer
+      type="text/javascript"
+      id="script-bundle"
+      src="/js/main.bundle.min.e3d337dd3f18427eb20aa355839d583ef6382bc42e34cfe789adb9358d463ef51f53691e32f524259380d4d3add49162f522426784990f3a5dbd39c33c6ed05a.js"
+      integrity="sha512-49M33T8YQn6yCqNVg51YPvY4K8QuNM/nia25NY1GPvUfU2keMvUkJZOA1NOt1JFi9SJCZ4SZDzpdvTnDPG7QWg=="
+      data-copy="Copy"
+      data-copied="Copied"></script>
+  
+
+  
+  
+
+<script src="/lib/jquery/jquery.slim.min.03cb160e3cfdb2667a2e2c80d283bebcf63ff8bbc4b629c9ab2babf6fae1d0c07ad470edae783efa4fabda2ac01c58d60e63b98b3c336be8208460f08f4354f5.js" integrity="sha512-A8sWDjz9smZ6LiyA0oO&#43;vPY/&#43;LvEtinJqyur9vrh0MB61HDtrng&#43;&#43;k&#43;r2irAHFjWDmO5izwza&#43;gghGDwj0NU9Q=="></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+  
+
+  
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Posts",
+    "name": "overthewire krypton war games",
+    "headline": "overthewire krypton war games",
+    "description": "This is a writeup on krypton from overthewire wargames.",
+    "abstract": "overthewire wargames krypton series",
+    "inLanguage": "en",
+    "url" : "http://localhost:1313/posts/krypton/",
+    "author" : {
+      "@type": "Person",
+      "name": "V1c70r_n00b"
+    },
+    "copyrightYear": "2025",
+    "dateCreated": "2025-07-26T00:00:00\u002b00:00",
+    "datePublished": "2025-07-26T00:00:00\u002b00:00",
+    
+    "dateModified": "2025-07-26T00:00:00\u002b00:00",
+    
+    "keywords": ["krypton","linux","cryptography"],
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "3269"
+  }]
+  </script>
+
+
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+  
+
+
+
+
+
+
+  
+  
+  <body class="flex flex-col h-screen m-auto leading-7 max-w-7xl px-6 sm:px-14 md:px-24 lg:px-32 text-lg bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral scrollbar-thin scrollbar-track-neutral-200 scrollbar-thumb-neutral-400 dark:scrollbar-track-neutral-800 dark:scrollbar-thumb-neutral-600">
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content">
+        <span class="font-bold text-primary-600 pe-2 dark:text-primary-400">&darr;</span>
+        Skip to main content
+      </a>
+    </div>
+    
+    
+      <div class="min-h-[148px]"></div>
+<div class="fixed inset-x-0 z-100">
+  <div
+    id="menu-blur"
+    class="absolute opacity-0 inset-x-0 top-0 h-full single_hero_background nozoom backdrop-blur-2xl shadow-2xl"></div>
+  <div class="relative m-auto leading-7 max-w-7xl px-6 sm:px-14 md:px-24 lg:px-32">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div
+  class="main-menu flex items-center justify-between py-6 md:justify-start gap-x-3 pt-[2px] pr-2 md:pr-4 pb-[3px] pl-0">
+  
+  
+
+  <div class="flex flex-1 items-center justify-between">
+    <nav class="flex space-x-3">
+      
+        <a href="/" class="text-base font-medium">
+          v1c70r_n00b&rsquo;$ Blog ⚔︎⛊
+        </a>
+      
+    </nav>
+    
+  <nav class="hidden md:flex items-center gap-x-5 md:ml-12 h-12">
+    
+      
+        
+  <a
+  href="/posts/"
+  
+  class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+  aria-label="Blog"
+  title="Posts">
+  
+  
+    <p class="text-base font-medium">
+      Blog
+    </p>
+  
+</a>
+
+
+
+      
+        
+  <div>
+  <div class="cursor-pointer flex items-center nested-menu">
+    
+    <a
+      
+      aria-label="About"
+      class="text-base font-medium hover:text-primary-600 dark:hover:text-primary-400"
+      title="">
+      <p>
+        About
+      </p>
+    </a>
+    <span>
+      <span class="relative block icon"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 20 20"
+  fill="currentColor"
+  aria-hidden="true"
+>
+  <path
+    fill-rule="evenodd"
+    d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+    clip-rule="evenodd"
+  />
+</svg>
+</span>
+    </span>
+  </div>
+  <div class="absolute menuhide">
+    <div class="pt-2 p-5 mt-2 rounded-xl backdrop-blur shadow-2xl">
+      <div class="flex flex-col space-y-3">
+        
+          <a
+            href="https://www.linkedin.com/in/victor-mwai/"
+            
+              target="_blank"
+            
+            aria-label="More about me"
+            class="flex items-center hover:text-primary-600 dark:hover:text-primary-400">
+            
+            <p class="text-sm font-sm" title="">
+              More about me
+            </p>
+          </a>
+        
+          <a
+            href="/about/"
+            
+            aria-label="This is me"
+            class="flex items-center hover:text-primary-600 dark:hover:text-primary-400">
+            
+            <p class="text-sm font-sm" title="Abouts">
+              This is me
+            </p>
+          </a>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+      
+        
+  <div>
+  <div class="cursor-pointer flex items-center nested-menu">
+    
+    <a
+      
+      aria-label="Resources"
+      class="text-base font-medium hover:text-primary-600 dark:hover:text-primary-400"
+      title="">
+      <p>
+        Resources
+      </p>
+    </a>
+    <span>
+      <span class="relative block icon"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 20 20"
+  fill="currentColor"
+  aria-hidden="true"
+>
+  <path
+    fill-rule="evenodd"
+    d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+    clip-rule="evenodd"
+  />
+</svg>
+</span>
+    </span>
+  </div>
+  <div class="absolute menuhide">
+    <div class="pt-2 p-5 mt-2 rounded-xl backdrop-blur shadow-2xl">
+      <div class="flex flex-col space-y-3">
+        
+          <a
+            href="https://tryhackme.com"
+            
+              target="_blank"
+            
+            aria-label="TryHackMe"
+            class="flex items-center hover:text-primary-600 dark:hover:text-primary-400">
+            
+            <p class="text-sm font-sm" title="">
+              TryHackMe
+            </p>
+          </a>
+        
+          <a
+            href="https://hackthebox.com/"
+            
+              target="_blank"
+            
+            aria-label="HTB"
+            class="flex items-center hover:text-primary-600 dark:hover:text-primary-400">
+            
+            <p class="text-sm font-sm" title="">
+              HTB
+            </p>
+          </a>
+        
+          <a
+            href="https://lab.wifichallenge.com/"
+            
+              target="_blank"
+            
+            aria-label="WifiChallenge"
+            class="flex items-center hover:text-primary-600 dark:hover:text-primary-400">
+            
+            <p class="text-sm font-sm" title="">
+              WifiChallenge
+            </p>
+          </a>
+        
+          <a
+            href="/resources/"
+            
+            aria-label="More Resources"
+            class="flex items-center hover:text-primary-600 dark:hover:text-primary-400">
+            
+            <p class="text-sm font-sm" title="Resources">
+              More Resources
+            </p>
+          </a>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+      
+    
+
+    
+
+    
+
+    
+      <button
+        id="search-button"
+        aria-label="Search"
+        class="text-base hover:text-primary-600 dark:hover:text-primary-400"
+        title="Search (/)">
+        <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+      </button>
+    
+
+    
+      <div class=" flex items-center">
+        <button
+          id="appearance-switcher"
+          aria-label="Dark mode switcher"
+          type="button"
+          class="text-base hover:text-primary-600 dark:hover:text-primary-400">
+          <div class="flex items-center justify-center dark:hidden">
+            <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+          </div>
+          <div class="items-center justify-center hidden dark:flex">
+            <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+          </div>
+        </button>
+      </div>
+    
+  </nav>
+
+    
+  <div class="flex md:hidden items-center gap-x-5 md:ml-12 h-12">
+    <span></span>
+
+    
+
+    
+
+    
+      <button
+        id="search-button-mobile"
+        aria-label="Search"
+        class="text-base hover:text-primary-600 dark:hover:text-primary-400"
+        title="Search (/)">
+        <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+      </button>
+    
+
+    
+      <button
+        id="appearance-switcher-mobile"
+        aria-label="Dark mode switcher"
+        type="button"
+        class="text-base hover:text-primary-600 dark:hover:text-primary-400 me-1">
+        <div class="flex items-center justify-center dark:hidden">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+        </div>
+        <div class="items-center justify-center hidden dark:flex">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+        </div>
+      </button>
+    
+  </div>
+
+  </div>
+  
+  <div class="-my-2 md:hidden">
+    <div id="menu-button" class="block">
+      
+        <div class="cursor-pointer hover:text-primary-600 dark:hover:text-primary-400">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+</span>
+        </div>
+        <div
+          id="menu-wrapper"
+          class="fixed inset-0 z-30 invisible w-screen h-screen m-0 overflow-auto transition-opacity opacity-0 cursor-default bg-neutral-100/50 backdrop-blur-sm dark:bg-neutral-900/50 pt-[5px]">
+          <ul
+            class="flex space-y-2 mt-3 flex-col items-end w-full px-6 py-6 mx-auto overflow-visible list-none text-end max-w-7xl">
+            <li id="menu-close-button">
+              <span
+                class="cursor-pointer inline-block align-text-bottom hover:text-primary-600 dark:hover:text-primary-400">
+                <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+              </span>
+            </li>
+
+            
+              
+  <li class="mt-1">
+  <a
+    href="/posts/"
+    
+    class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+    aria-label="Blog"
+    title="Posts">
+    
+    
+      <p class="text-bg font-bg">
+        Blog
+      </p>
+    
+  </a>
+</li>
+
+
+
+            
+              
+  <li class="mt-1">
+  <a
+    href=""
+    aria-label="About"
+    class="flex items-center hover:text-primary-600 dark:hover:text-primary-400">
+    
+    <p class="text-bg font-bg" title="">
+      About
+    </p>
+    <span>
+      <span class="relative block icon"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 20 20"
+  fill="currentColor"
+  aria-hidden="true"
+>
+  <path
+    fill-rule="evenodd"
+    d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+    clip-rule="evenodd"
+  />
+</svg>
+</span>
+    </span>
+  </a>
+</li>
+
+  <li class="mt-1">
+    <a
+      href="https://www.linkedin.com/in/victor-mwai/"
+      
+        target="_blank"
+      
+      aria-label="More about me"
+      class="flex items-center hover:text-primary-600 dark:hover:text-primary-400">
+      
+      <p class="text-sm font-small" title="">
+        More about me
+      </p>
+    </a>
+  </li>
+
+  <li class="mt-1">
+    <a
+      href="/about/"
+      
+      aria-label="This is me"
+      class="flex items-center hover:text-primary-600 dark:hover:text-primary-400">
+      
+      <p class="text-sm font-small" title="Abouts">
+        This is me
+      </p>
+    </a>
+  </li>
+
+<li class="mb-2"></li>
+
+
+
+            
+              
+  <li class="mt-1">
+  <a
+    href=""
+    aria-label="Resources"
+    class="flex items-center hover:text-primary-600 dark:hover:text-primary-400">
+    
+    <p class="text-bg font-bg" title="">
+      Resources
+    </p>
+    <span>
+      <span class="relative block icon"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 20 20"
+  fill="currentColor"
+  aria-hidden="true"
+>
+  <path
+    fill-rule="evenodd"
+    d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+    clip-rule="evenodd"
+  />
+</svg>
+</span>
+    </span>
+  </a>
+</li>
+
+  <li class="mt-1">
+    <a
+      href="https://tryhackme.com"
+      
+        target="_blank"
+      
+      aria-label="TryHackMe"
+      class="flex items-center hover:text-primary-600 dark:hover:text-primary-400">
+      
+      <p class="text-sm font-small" title="">
+        TryHackMe
+      </p>
+    </a>
+  </li>
+
+  <li class="mt-1">
+    <a
+      href="https://hackthebox.com/"
+      
+        target="_blank"
+      
+      aria-label="HTB"
+      class="flex items-center hover:text-primary-600 dark:hover:text-primary-400">
+      
+      <p class="text-sm font-small" title="">
+        HTB
+      </p>
+    </a>
+  </li>
+
+  <li class="mt-1">
+    <a
+      href="https://lab.wifichallenge.com/"
+      
+        target="_blank"
+      
+      aria-label="WifiChallenge"
+      class="flex items-center hover:text-primary-600 dark:hover:text-primary-400">
+      
+      <p class="text-sm font-small" title="">
+        WifiChallenge
+      </p>
+    </a>
+  </li>
+
+  <li class="mt-1">
+    <a
+      href="/resources/"
+      
+      aria-label="More Resources"
+      class="flex items-center hover:text-primary-600 dark:hover:text-primary-400">
+      
+      <p class="text-sm font-small" title="Resources">
+        More Resources
+      </p>
+    </a>
+  </li>
+
+<li class="mb-2"></li>
+
+
+
+            
+
+          </ul>
+          
+        </div>
+      
+    </div>
+  </div>
+
+</div>
+
+
+
+
+  <script>
+    (function () {
+      var $mainmenu = $(".main-menu");
+      var path = window.location.pathname;
+      $mainmenu.find('a[href="' + path + '"]').each(function (i, e) {
+        $(e).children("p").addClass("active");
+      });
+    })();
+  </script>
+
+
+  </div>
+</div>
+
+
+<script
+  type="text/javascript"
+  src="/js/background-blur.min.00a57c73ea12f2cab2980c3c3d649e89f6d82f190f74bbe2b67f2f5e39ab7d032ece47086400ca05396758aace13299da49aca43ea643d2625e62c506267a169.js"
+  integrity="sha512-AKV8c&#43;oS8sqymAw8PWSeifbYLxkPdLvitn8vXjmrfQMuzkcIZADKBTlnWKrOEymdpJrKQ&#43;pkPSYl5ixQYmehaQ=="
+  data-blur-id="menu-blur"></script>
+
+    
+    <div class="relative flex flex-col grow">
+      <main id="main-content" class="grow">
+        
+  
+  <article>
+    
+    
+      
+      
+      
+      
+        
+
+
+
+
+
+
+
+  
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+
+
+
+
+
+  
+    
+    
+      
+      
+    
+  
+
+
+
+
+
+    <div id="hero" class="h-[150px] md:h-[200px]"></div>
+  
+  <div class="fixed inset-x-0 top-0 h-[800px] single_hero_background nozoom">
+    
+    
+    
+    <img
+      id="background-image"
+      src="/posts/krypton/featured_hu_ca1ba8535d8f05b2.png"
+      alt="overthewire krypton war games"
+      loading="eager"
+      decoding="async"
+      fetchpriority="high"
+      class="absolute inset-0 w-full h-full object-cover"
+      >
+    <div
+      class="absolute inset-0 bg-gradient-to-t from-neutral dark:from-neutral-800 to-transparent mix-blend-normal"></div>
+    <div
+      class="absolute inset-0 opacity-60 bg-gradient-to-t from-neutral dark:from-neutral-800 to-neutral-100 dark:to-neutral-800 mix-blend-normal"></div>
+  </div>
+
+  
+    <div
+      id="background-blur"
+      class="fixed opacity-0 inset-x-0 top-0 h-full single_hero_background nozoom backdrop-blur-2xl"></div>
+    
+    
+    <script
+      type="text/javascript"
+      src="/js/background-blur.min.00a57c73ea12f2cab2980c3c3d649e89f6d82f190f74bbe2b67f2f5e39ab7d032ece47086400ca05396758aace13299da49aca43ea643d2625e62c506267a169.js"
+      integrity="sha512-AKV8c&#43;oS8sqymAw8PWSeifbYLxkPdLvitn8vXjmrfQMuzkcIZADKBTlnWKrOEymdpJrKQ&#43;pkPSYl5ixQYmehaQ=="
+      data-blur-id="background-blur"
+      data-image-id="background-image"
+      data-image-url="/posts/krypton/featured_hu_ca1ba8535d8f05b2.png"></script>
+  
+      
+    
+
+    
+    <header id="single_header" class="mt-5 max-w-prose">
+      
+        <ol class="text-sm text-neutral-500 dark:text-neutral-400 print:hidden">
+  
+  
+    
+  
+    
+  
+  <li class="hidden">
+    <a class="hover:underline decoration-neutral-300 dark:underline-neutral-600" href="/"
+      >v1c70r_n00b&#39;$ Blog ⚔︎⛊</a
+    ><span class="px-1 text-primary-500">/</span>
+  </li>
+
+  
+  <li class="inline">
+    <a class="hover:underline decoration-neutral-300 dark:underline-neutral-600" href="/posts/"
+      >Posts</a
+    ><span class="px-1 text-primary-500">/</span>
+  </li>
+
+  
+  <li class="hidden">
+    <a class="hover:underline decoration-neutral-300 dark:underline-neutral-600" href="/posts/krypton/"
+      >overthewire krypton war games</a
+    ><span class="px-1 text-primary-500">/</span>
+  </li>
+
+</ol>
+
+
+      
+      <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        overthewire krypton war games
+      </h1>
+      <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+        
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2025-07-26T00:00:00&#43;00:00">26 July 2025</time><span class="px-2 text-primary-500">&middot;</span><span>3269 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">16 mins</span>
+    
+
+    
+    
+  </div>
+
+  
+    <div class="flex flex-row flex-wrap items-center">
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+  
+
+  
+  
+    <div class="flex flex-row flex-wrap items-center">
+      
+        
+      
+        
+          
+            
+              <a class="relative mt-[0.5rem] me-2" href="/categories/overthewire/">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Overthewire
+  </span>
+</span>
+
+              </a>
+            
+          
+        
+      
+        
+      
+        
+          
+            
+              <a class="relative mt-[0.5rem] me-2" href="/tags/krypton/">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Krypton
+  </span>
+</span>
+
+              </a>
+            
+              <a class="relative mt-[0.5rem] me-2" href="/tags/linux/">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Linux
+  </span>
+</span>
+
+              </a>
+            
+              <a class="relative mt-[0.5rem] me-2" href="/tags/cryptography/">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Cryptography
+  </span>
+</span>
+
+              </a>
+            
+          
+        
+      
+    </div>
+  
+
+  
+  
+
+
+
+      </div>
+      
+        
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+    
+    
+<div class="flex author">
+  
+    
+    
+      
+    
+    
+      
+      
+      
+        
+        
+        
+      
+      <img
+        class="!mt-0 !mb-0 h-24 w-24 rounded-full me-4"
+        width="96"
+        height="96"
+        alt="V1c70r_n00b"
+        src="/profile_hu_a48ded19aa968609.png"
+        data-zoom-src="/profile_hu_796f091d1cbff0bc.png">
+    
+  
+  <div class="place-self-center">
+    
+      <div class="text-[0.6rem] uppercase leading-3 text-neutral-500 dark:text-neutral-400">
+        Author
+      </div>
+      <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
+        V1c70r_n00b
+      </div>
+    
+    
+      <div class="text-sm text-neutral-700 dark:text-neutral-400"><p>Security Analyst || CTF player</p>
+<p>Isaiah 6:8</p>
+</div>
+    
+    <div class="text-2xl sm:text-lg">
+  <div class="flex flex-wrap text-neutral-400 dark:text-neutral-500">
+    
+      
+        <a
+          class="px-1 hover:text-primary-700 dark:hover:text-primary-400"
+          href="https://github.com/V1c70rn00b"
+          target="_blank"
+          aria-label="Github"
+          title="Github"
+          rel="me noopener noreferrer"
+          ><span class="inline-block align-text-bottom"><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+</span></span></a
+        >
+      
+    
+      
+        <a
+          class="px-1 hover:text-primary-700 dark:hover:text-primary-400"
+          href="https://medium.com/@V1c70r_n00b"
+          target="_blank"
+          aria-label="Medium"
+          title="Medium"
+          rel="me noopener noreferrer"
+          ><span class="inline-block align-text-bottom"><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path fill="currentColor" d="M180.5,74.262C80.813,74.262,0,155.633,0,256S80.819,437.738,180.5,437.738,361,356.373,361,256,280.191,74.262,180.5,74.262Zm288.25,10.646c-49.845,0-90.245,76.619-90.245,171.095s40.406,171.1,90.251,171.1,90.251-76.619,90.251-171.1H559C559,161.5,518.6,84.908,468.752,84.908Zm139.506,17.821c-17.526,0-31.735,68.628-31.735,153.274s14.2,153.274,31.735,153.274S640,340.631,640,256C640,171.351,625.785,102.729,608.258,102.729Z"/></svg>
+</span></span></a
+        >
+      
+    
+      
+        <a
+          class="px-1 hover:text-primary-700 dark:hover:text-primary-400"
+          href="https://twitter.com/v1c70r_n00b"
+          target="_blank"
+          aria-label="X-Twitter"
+          title="X-Twitter"
+          rel="me noopener noreferrer"
+          ><span class="inline-block align-text-bottom"><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/></svg></span></span></a
+        >
+      
+    
+  </div>
+
+</div>
+  </div>
+</div>
+
+  
+
+  
+
+  
+    <div class="mb-5"></div>
+  
+
+      
+    </header>
+
+    
+    <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
+      
+      
+      
+      
+      
+        <div class="order-first lg:ml-auto px-0 lg:order-last lg:ps-8 lg:max-w-2xs">
+          <div class="toc ps-5 print:hidden lg:sticky lg:top-[140px]">
+            
+              <details
+  open
+  id="TOCView"
+  class="toc-right mt-0 overflow-y-auto overscroll-contain scrollbar-thin scrollbar-track-neutral-200 scrollbar-thumb-neutral-400 dark:scrollbar-track-neutral-800 dark:scrollbar-thumb-neutral-600 rounded-lg -ms-5 ps-5 pe-2 hidden lg:block">
+  <summary
+    class="block py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 -ms-5 ps-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    Table of Contents
+  </summary>
+  <div
+    class="min-w-[220px] py-2 border-dotted border-s-1 -ms-5 ps-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#krypton-0-1">Krypton 0-1</a></li>
+        <li><a href="#krypton-1-2">Krypton 1-2</a></li>
+        <li><a href="#krypton-2-3">Krypton 2-3</a></li>
+        <li><a href="#krypton-3-4">Krypton 3-4</a></li>
+        <li><a href="#krypton-4-5">Krypton 4-5</a></li>
+        <li><a href="#krypton-5-6">Krypton 5-6</a></li>
+        <li><a href="#krypton-6-7">Krypton 6-7</a></li>
+        <li><a href="#krypton-7">Krypton 7</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</details>
+<details class="toc-inside mt-0 overflow-hidden rounded-lg -ms-5 ps-5 lg:hidden">
+  <summary
+    class="py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 -ms-5 ps-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    Table of Contents
+  </summary>
+  <div
+    class="py-2 border-dotted border-neutral-300 border-s-1 -ms-5 ps-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#krypton-0-1">Krypton 0-1</a></li>
+        <li><a href="#krypton-1-2">Krypton 1-2</a></li>
+        <li><a href="#krypton-2-3">Krypton 2-3</a></li>
+        <li><a href="#krypton-3-4">Krypton 3-4</a></li>
+        <li><a href="#krypton-4-5">Krypton 4-5</a></li>
+        <li><a href="#krypton-5-6">Krypton 5-6</a></li>
+        <li><a href="#krypton-6-7">Krypton 6-7</a></li>
+        <li><a href="#krypton-7">Krypton 7</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</details>
+
+
+<script>
+  (function () {
+    'use strict'
+
+    const SCROLL_OFFSET_RATIO = 0.33
+    const TOC_SELECTOR = '#TableOfContents'
+    const ANCHOR_SELECTOR = '.anchor'
+    const TOC_LINK_SELECTOR = 'a[href^="#"]'
+    const NESTED_LIST_SELECTOR = 'li ul'
+    const ACTIVE_CLASS = 'active'
+    let isJumpingToAnchor = false
+
+    function getActiveAnchorId(anchors, offsetRatio) {
+      const threshold = window.scrollY + window.innerHeight * offsetRatio
+      const tocLinks = [...document.querySelectorAll('#TableOfContents a[href^="#"]')]
+      const tocIds = new Set(tocLinks.map(link => link.getAttribute('href').substring(1)))
+
+      if (isJumpingToAnchor) {
+        for (let i = 0; i < anchors.length; i++) {
+          const anchor = anchors[i]
+          if (!tocIds.has(anchor.id)) continue
+          const top = anchor.getBoundingClientRect().top + window.scrollY
+          if (Math.abs(window.scrollY - top) < 100) {
+            return anchor.id
+          }
+        }
+      }
+
+      for (let i = anchors.length - 1; i >= 0; i--) {
+        const top = anchors[i].getBoundingClientRect().top + window.scrollY
+        if (top <= threshold && tocIds.has(anchors[i].id)) {
+          return anchors[i].id
+        }
+      }
+      return anchors.find(anchor => tocIds.has(anchor.id))?.id || ''
+    }
+
+    function updateTOC({ toc, anchors, links, scrollOffset, collapseInactive }) {
+      const activeId = getActiveAnchorId(anchors, scrollOffset)
+      if (!activeId) return
+
+      links.forEach(link => {
+        const isActive = link.getAttribute('href') === `#${activeId}`
+        link.classList.toggle(ACTIVE_CLASS, isActive)
+
+        if (collapseInactive) {
+          const ul = link.closest('li')?.querySelector('ul')
+          if (ul) ul.style.display = isActive ? '' : 'none'
+        }
+      })
+
+      if (collapseInactive) {
+        const activeLink = toc.querySelector(`a[href="#${CSS.escape(activeId)}"]`)
+        let el = activeLink
+        while (el && el !== toc) {
+          if (el.tagName === 'UL') el.style.display = ''
+          if (el.tagName === 'LI') el.querySelector('ul')?.style.setProperty('display', '')
+          el = el.parentElement
+        }
+      }
+    }
+
+    function initTOC() {
+      const toc = document.querySelector(TOC_SELECTOR)
+      if (!toc) return
+
+      const collapseInactive = true
+      const anchors = [...document.querySelectorAll(ANCHOR_SELECTOR)]
+      const links = [...toc.querySelectorAll(TOC_LINK_SELECTOR)]
+
+      if (collapseInactive) {
+        toc.querySelectorAll(NESTED_LIST_SELECTOR).forEach(ul => ul.style.display = 'none')
+      }
+
+      links.forEach(link => {
+        link.addEventListener('click', () => {
+          isJumpingToAnchor = true
+        })
+      })
+
+      const config = {
+        toc,
+        anchors,
+        links,
+        scrollOffset: SCROLL_OFFSET_RATIO,
+        collapseInactive
+      }
+
+      window.addEventListener('scroll', () => updateTOC(config), { passive: true })
+      window.addEventListener('hashchange', () => updateTOC(config), { passive: true })
+
+      updateTOC(config)
+    }
+
+    document.readyState === 'loading'
+      ? document.addEventListener('DOMContentLoaded', initTOC)
+      : initTOC()
+  })()
+</script>
+
+
+            
+          </div>
+        </div>
+      
+
+
+      <div class="min-w-0 min-h-0 max-w-fit">
+        
+
+        <div class="article-content max-w-prose mb-20">
+          
+<h2 class="relative group">Krypton 0-1
+    <div id="krypton-0-1" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#krypton-0-1" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>The goal of this challenges is too sharpen our skills on cryptography.</p>
+<p>As for this level, we are provided with a text that is base64 encoded, upon which once decrypted, we get the password for the next level as shown below in the challenge briefing.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-jsx" data-lang="jsx"><span class="line"><span class="cl"><span class="nx">Welcome</span> <span class="nx">to</span> <span class="nx">Krypton</span><span class="o">!</span> <span class="nx">The</span> <span class="nx">first</span> <span class="nx">level</span> <span class="nx">is</span> <span class="nx">easy</span><span class="p">.</span> <span class="nx">The</span> <span class="nx">following</span> <span class="nx">string</span>
+</span></span><span class="line"><span class="cl"><span class="nx">encodes</span> <span class="nx">the</span> <span class="nx">password</span> <span class="nx">using</span> <span class="nx">Base64</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">S1JZUFRPTklTR1JFQVQ</span><span class="o">=</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">Use</span> <span class="k">this</span> <span class="nx">password</span> <span class="nx">to</span> <span class="nx">log</span> <span class="k">in</span> <span class="nx">to</span> <span class="nx">krypton</span><span class="p">.</span><span class="nx">labs</span><span class="p">.</span><span class="nx">overthewire</span><span class="p">.</span><span class="nx">org</span> <span class="kd">with</span>
+</span></span><span class="line"><span class="cl"><span class="nx">username</span> <span class="nx">krypton1</span> <span class="nx">using</span> <span class="nx">SSH</span> <span class="nx">on</span> <span class="nx">port</span> <span class="mf">2231.</span> <span class="nx">You</span> <span class="nx">can</span> <span class="nx">find</span> <span class="nx">the</span> <span class="nx">files</span> <span class="k">for</span> <span class="nx">other</span> <span class="nx">levels</span> <span class="k">in</span>
+</span></span><span class="line"><span class="cl"><span class="sr">/krypton/</span>
+</span></span></code></pre></div><p>For this, we shall use our Ubuntu machine to decrypt the text as shown below.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-jsx" data-lang="jsx"><span class="line"><span class="cl"><span class="nx">v1c70r</span><span class="o">-</span><span class="nx">n00b</span><span class="err">@</span><span class="nx">v1c70r</span><span class="o">-</span><span class="nx">n00b</span><span class="o">:~</span><span class="err">/Desktop/overthewire/krypton$ echo &#34;S1JZUFRPTklTR1JFQVQ=&#34; | base64 -d</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">REDACTED</span><span class="p">]</span>
+</span></span></code></pre></div><p>With that, we have our password for the next level.</p>
+
+<h2 class="relative group">Krypton 1-2
+    <div id="krypton-1-2" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#krypton-1-2" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>The goal for this level, is to try and decrypt the encrypted password stored in the file <code>krypton2</code> in order to find the password for the next level. Below is a brief of the challenge.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-jsx" data-lang="jsx"><span class="line"><span class="cl"><span class="nx">The</span> <span class="nx">password</span> <span class="k">for</span> <span class="nx">level</span> <span class="mi">2</span> <span class="nx">is</span> <span class="k">in</span> <span class="nx">the</span> <span class="nx">file</span> <span class="err">‘</span><span class="nx">krypton2</span><span class="err">’</span><span class="p">.</span> <span class="nx">It</span> <span class="nx">is</span>
+</span></span><span class="line"><span class="cl"><span class="err">‘</span><span class="nx">encrypted</span><span class="err">’</span> <span class="nx">using</span> <span class="nx">a</span> <span class="nx">simple</span> <span class="nx">rotation</span><span class="p">.</span> <span class="nx">It</span> <span class="nx">is</span> <span class="nx">also</span> <span class="k">in</span> <span class="nx">non</span><span class="o">-</span><span class="nx">standard</span>
+</span></span><span class="line"><span class="cl"><span class="nx">ciphertext</span> <span class="nx">format</span><span class="p">.</span> <span class="nx">When</span> <span class="nx">using</span> <span class="nx">alpha</span> <span class="nx">characters</span> <span class="k">for</span> <span class="nx">cipher</span> <span class="nx">text</span> <span class="nx">it</span> <span class="nx">is</span>
+</span></span><span class="line"><span class="cl"><span class="nx">normal</span> <span class="nx">to</span> <span class="nx">group</span> <span class="nx">the</span> <span class="nx">letters</span> <span class="nx">into</span> <span class="mi">5</span> <span class="nx">letter</span> <span class="nx">clusters</span><span class="p">,</span> <span class="nx">regardless</span> <span class="k">of</span>
+</span></span><span class="line"><span class="cl"><span class="nx">word</span> <span class="nx">boundaries</span><span class="p">.</span> <span class="nx">This</span> <span class="nx">helps</span> <span class="nx">obfuscate</span> <span class="nx">any</span> <span class="nx">patterns</span><span class="p">.</span> <span class="nx">This</span> <span class="nx">file</span> <span class="nx">has</span>
+</span></span><span class="line"><span class="cl"><span class="nx">kept</span> <span class="nx">the</span> <span class="nx">plain</span> <span class="nx">text</span> <span class="nx">word</span> <span class="nx">boundaries</span> <span class="nx">and</span> <span class="nx">carried</span> <span class="nx">them</span> <span class="nx">to</span> <span class="nx">the</span> <span class="nx">cipher</span>
+</span></span><span class="line"><span class="cl"><span class="nx">text</span><span class="p">.</span> <span class="nx">Enjoy</span><span class="o">!</span>
+</span></span></code></pre></div><p>Below is the text in the file that we are required to decrypt.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-jsx" data-lang="jsx"><span class="line"><span class="cl"><span class="nx">krypton1</span><span class="err">@</span><span class="nx">krypton</span><span class="o">:</span><span class="err">/krypton/krypton1$ ls</span>
+</span></span><span class="line"><span class="cl"><span class="nx">krypton2</span>  <span class="nx">README</span>
+</span></span><span class="line"><span class="cl"><span class="nx">krypton1</span><span class="err">@</span><span class="nx">krypton</span><span class="o">:</span><span class="err">/krypton/krypton1$ cat krypton2 </span>
+</span></span><span class="line"><span class="cl"><span class="nx">YRIRY</span> <span class="nx">GJB</span> <span class="nx">CNFFJBEQ</span> <span class="nx">EBGGRA</span>
+</span></span></code></pre></div><p>From the README file, the text is encrypted using rot13.  Since we are encouraged to not use cryptool, we shall try a <a
+  href="https://stackoverflow.com/questions/5442436/using-rot13-and-tr-command-for-having-an-encrypted-email-address"
+    target="_blank"
+  >regex</a> that can help to decrypt the text as shown below.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-jsx" data-lang="jsx"><span class="line"><span class="cl"><span class="nx">krypton1</span><span class="err">@</span><span class="nx">krypton</span><span class="o">:</span><span class="err">/krypton/krypton1$ cat krypton2 | tr &#39;[A-Za-z]&#39; &#39;[N-ZA-Mn-za-m]&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">REDACTED</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="nx">krypton1</span><span class="err">@</span><span class="nx">krypton</span><span class="o">:</span><span class="err">/krypton/krypton1$ </span>
+</span></span></code></pre></div><p>And with that, we have the password for the next level.</p>
+
+<h2 class="relative group">Krypton 2-3
+    <div id="krypton-2-3" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#krypton-2-3" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>We shall start by reading the <code>README</code> file to get the guidelines on how to solve the challenge for this level.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-jsx" data-lang="jsx"><span class="line"><span class="cl"><span class="nx">Krypton</span> <span class="mi">2</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">ROT13</span> <span class="nx">is</span> <span class="nx">a</span> <span class="nx">simple</span> <span class="nx">substitution</span> <span class="nx">cipher</span><span class="p">.</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">Substitution</span> <span class="nx">ciphers</span> <span class="nx">are</span> <span class="nx">a</span> <span class="nx">simple</span> <span class="nx">replacement</span> <span class="nx">algorithm</span><span class="p">.</span>  <span class="nx">In</span> <span class="k">this</span> <span class="nx">example</span>
+</span></span><span class="line"><span class="cl"><span class="k">of</span> <span class="nx">a</span> <span class="nx">substitution</span> <span class="nx">cipher</span><span class="p">,</span> <span class="nx">we</span> <span class="nx">will</span> <span class="nx">explore</span> <span class="nx">a</span> <span class="s1">&#39;monoalphebetic&#39;</span> <span class="nx">cipher</span><span class="p">.</span>
+</span></span><span class="line"><span class="cl"><span class="nx">Monoalphebetic</span> <span class="nx">means</span><span class="p">,</span> <span class="nx">literally</span><span class="p">,</span> <span class="s2">&#34;one alphabet&#34;</span> <span class="nx">and</span> <span class="nx">you</span> <span class="nx">will</span> <span class="nx">see</span> <span class="nx">why</span><span class="p">.</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">This</span> <span class="nx">level</span> <span class="nx">contains</span> <span class="nx">an</span> <span class="nx">old</span> <span class="nx">form</span> <span class="k">of</span> <span class="nx">cipher</span> <span class="nx">called</span> <span class="nx">a</span> <span class="s1">&#39;Caesar Cipher&#39;</span><span class="p">.</span>
+</span></span><span class="line"><span class="cl"><span class="nx">A</span> <span class="nx">Caesar</span> <span class="nx">cipher</span> <span class="nx">shifts</span> <span class="nx">the</span> <span class="nx">alphabet</span> <span class="nx">by</span> <span class="nx">a</span> <span class="nx">set</span> <span class="nx">number</span><span class="p">.</span>  <span class="nx">For</span> <span class="nx">example</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">plain</span><span class="o">:</span>	<span class="nx">a</span> <span class="nx">b</span> <span class="nx">c</span> <span class="nx">d</span> <span class="nx">e</span> <span class="nx">f</span> <span class="nx">g</span> <span class="nx">h</span> <span class="nx">i</span> <span class="nx">j</span> <span class="nx">k</span> <span class="p">...</span>
+</span></span><span class="line"><span class="cl"><span class="nx">cipher</span><span class="o">:</span>	<span class="nx">G</span> <span class="nx">H</span> <span class="nx">I</span> <span class="nx">J</span> <span class="nx">K</span> <span class="nx">L</span> <span class="nx">M</span> <span class="nx">N</span> <span class="nx">O</span> <span class="nx">P</span> <span class="nx">Q</span> <span class="p">...</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">In</span> <span class="k">this</span> <span class="nx">example</span><span class="p">,</span> <span class="nx">the</span> <span class="nx">letter</span> <span class="s1">&#39;a&#39;</span> <span class="k">in</span> <span class="nx">plaintext</span> <span class="nx">is</span> <span class="nx">replaced</span> <span class="nx">by</span> <span class="nx">a</span> <span class="s1">&#39;G&#39;</span> <span class="k">in</span> <span class="nx">the</span>
+</span></span><span class="line"><span class="cl"><span class="nx">ciphertext</span> <span class="nx">so</span><span class="p">,</span> <span class="k">for</span> <span class="nx">example</span><span class="p">,</span> <span class="nx">the</span> <span class="nx">plaintext</span> <span class="s1">&#39;bad&#39;</span> <span class="nx">becomes</span> <span class="s1">&#39;HGJ&#39;</span> <span class="k">in</span> <span class="nx">ciphertext</span><span class="p">.</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">The</span> <span class="nx">password</span> <span class="k">for</span> <span class="nx">level</span> <span class="mi">3</span> <span class="nx">is</span> <span class="k">in</span> <span class="nx">the</span> <span class="nx">file</span> <span class="nx">krypton3</span><span class="p">.</span>  <span class="nx">It</span> <span class="nx">is</span> <span class="k">in</span> <span class="mi">5</span> <span class="nx">letter</span>
+</span></span><span class="line"><span class="cl"><span class="nx">group</span> <span class="nx">ciphertext</span><span class="p">.</span>  <span class="nx">It</span> <span class="nx">is</span> <span class="nx">encrypted</span> <span class="kd">with</span> <span class="nx">a</span> <span class="nx">Caesar</span> <span class="nx">Cipher</span><span class="p">.</span>  <span class="nx">Without</span> <span class="nx">any</span> 
+</span></span><span class="line"><span class="cl"><span class="nx">further</span> <span class="nx">information</span><span class="p">,</span> <span class="k">this</span> <span class="nx">cipher</span> <span class="nx">text</span> <span class="nx">may</span> <span class="nx">be</span> <span class="nx">difficult</span> <span class="nx">to</span> <span class="k">break</span><span class="p">.</span>  <span class="nx">You</span> <span class="k">do</span> 
+</span></span><span class="line"><span class="cl"><span class="nx">not</span> <span class="nx">have</span> <span class="nx">direct</span> <span class="nx">access</span> <span class="nx">to</span> <span class="nx">the</span> <span class="nx">key</span><span class="p">,</span> <span class="nx">however</span> <span class="nx">you</span> <span class="k">do</span> <span class="nx">have</span> <span class="nx">access</span> <span class="nx">to</span> <span class="nx">a</span> <span class="nx">program</span> 
+</span></span><span class="line"><span class="cl"><span class="nx">that</span> <span class="nx">will</span> <span class="nx">encrypt</span> <span class="nx">anything</span> <span class="nx">you</span> <span class="nx">wish</span> <span class="nx">to</span> <span class="nx">give</span> <span class="nx">it</span> <span class="nx">using</span> <span class="nx">the</span> <span class="nx">key</span><span class="p">.</span>  
+</span></span><span class="line"><span class="cl"><span class="nx">If</span> <span class="nx">you</span> <span class="nx">think</span> <span class="nx">logically</span><span class="p">,</span> <span class="k">this</span> <span class="nx">is</span> <span class="nx">completely</span> <span class="nx">easy</span><span class="p">.</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">One</span> <span class="nx">shot</span> <span class="nx">can</span> <span class="nx">solve</span> <span class="nx">it</span><span class="o">!</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">Have</span> <span class="nx">fun</span><span class="p">.</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">Additional</span> <span class="nx">Information</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">The</span> <span class="sb">`encrypt`</span> <span class="nx">binary</span> <span class="nx">will</span> <span class="nx">look</span> <span class="k">for</span> <span class="nx">the</span> <span class="nx">keyfile</span> <span class="k">in</span> <span class="nx">your</span> <span class="nx">current</span> <span class="nx">working</span>
+</span></span><span class="line"><span class="cl"><span class="nx">directory</span><span class="p">.</span> <span class="nx">Therefore</span><span class="p">,</span> <span class="nx">it</span> <span class="nx">might</span> <span class="nx">be</span> <span class="nx">best</span> <span class="nx">to</span> <span class="nx">create</span> <span class="nx">a</span> <span class="nx">working</span> <span class="nx">direcory</span> <span class="k">in</span> <span class="err">/tmp</span>
+</span></span><span class="line"><span class="cl"><span class="nx">and</span> <span class="k">in</span> <span class="nx">there</span> <span class="nx">a</span> <span class="nx">link</span> <span class="nx">to</span> <span class="nx">the</span> <span class="nx">keyfile</span><span class="p">.</span> <span class="nx">As</span> <span class="nx">the</span> <span class="sb">`encrypt`</span> <span class="nx">binary</span> <span class="nx">runs</span> <span class="nx">setuid</span>
+</span></span><span class="line"><span class="cl"><span class="sb">`krypton3`</span><span class="p">,</span> <span class="nx">you</span> <span class="nx">also</span> <span class="nx">need</span> <span class="nx">to</span> <span class="nx">give</span> <span class="sb">`krypton3`</span> <span class="nx">access</span> <span class="nx">to</span> <span class="nx">your</span> <span class="nx">working</span> <span class="nx">directory</span><span class="p">.</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">Here</span> <span class="nx">is</span> <span class="nx">an</span> <span class="nx">example</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">krypton2</span><span class="err">@</span><span class="nx">melinda</span><span class="o">:~</span><span class="nx">$</span> <span class="nx">mktemp</span> <span class="o">-</span><span class="nx">d</span>
+</span></span><span class="line"><span class="cl"><span class="err">/tmp/tmp.Wf2OnCpCDQ</span>
+</span></span><span class="line"><span class="cl"><span class="nx">krypton2</span><span class="err">@</span><span class="nx">melinda</span><span class="o">:~</span><span class="nx">$</span> <span class="nx">cd</span> <span class="o">/</span><span class="nx">tmp</span><span class="o">/</span><span class="nx">tmp</span><span class="p">.</span><span class="nx">Wf2OnCpCDQ</span>
+</span></span><span class="line"><span class="cl"><span class="nx">krypton2</span><span class="err">@</span><span class="nx">melinda</span><span class="o">:</span><span class="err">/tmp/tmp.Wf2OnCpCDQ$ ln -s /krypton/krypton2/keyfile.dat</span>
+</span></span><span class="line"><span class="cl"><span class="nx">krypton2</span><span class="err">@</span><span class="nx">melinda</span><span class="o">:</span><span class="err">/tmp/tmp.Wf2OnCpCDQ$ ls</span>
+</span></span><span class="line"><span class="cl"><span class="nx">keyfile</span><span class="p">.</span><span class="nx">dat</span>
+</span></span><span class="line"><span class="cl"><span class="nx">krypton2</span><span class="err">@</span><span class="nx">melinda</span><span class="o">:</span><span class="err">/tmp/tmp.Wf2OnCpCDQ$ chmod 777 .</span>
+</span></span><span class="line"><span class="cl"><span class="nx">krypton2</span><span class="err">@</span><span class="nx">melinda</span><span class="o">:</span><span class="err">/tmp/tmp.Wf2OnCpCDQ$ /krypton/krypton2/encrypt /etc/issue</span>
+</span></span><span class="line"><span class="cl"><span class="nx">krypton2</span><span class="err">@</span><span class="nx">melinda</span><span class="o">:</span><span class="err">/tmp/tmp.Wf2OnCpCDQ$ ls</span>
+</span></span><span class="line"><span class="cl"><span class="nx">ciphertext</span>  <span class="nx">keyfile</span><span class="p">.</span><span class="nx">dat</span>
+</span></span></code></pre></div><p>From the above description, this level uses Caesar cipher. We shall do as directed in the example given by first creating a temporary directory for us to solve the challenge and create a symbolic link of the <code>keyfile.dat</code> on the temporary directory in order for us to understand how the cipher works then decrypt our text.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-jsx" data-lang="jsx"><span class="line"><span class="cl"><span class="nx">krypton2</span><span class="err">@</span><span class="nx">krypton</span><span class="o">:</span><span class="err">/krypton/krypton2$ mkdir /tmp/news</span>
+</span></span><span class="line"><span class="cl"><span class="nx">krypton2</span><span class="err">@</span><span class="nx">krypton</span><span class="o">:</span><span class="err">/krypton/krypton2$ cp encrypt krypton3  /tmp/news</span>
+</span></span><span class="line"><span class="cl"><span class="nx">krypton2</span><span class="err">@</span><span class="nx">krypton</span><span class="o">:</span><span class="err">/krypton/krypton2$ cd /tmp/news</span>
+</span></span><span class="line"><span class="cl"><span class="nx">krypton2</span><span class="err">@</span><span class="nx">krypton</span><span class="o">:</span><span class="err">/tmp/news$ ln -s /krypton/krypton2/keyfile.dat </span>
+</span></span><span class="line"><span class="cl"><span class="nx">krypton2</span><span class="err">@</span><span class="nx">krypton</span><span class="o">:</span><span class="err">/tmp/news$ ls</span>
+</span></span><span class="line"><span class="cl"><span class="nx">encrypt</span>  <span class="nx">keyfile</span><span class="p">.</span><span class="nx">dat</span>  <span class="nx">krypton3</span>  <span class="nx">README</span>
+</span></span></code></pre></div><p>As seen below, we have tried to encrypt a file using the <code>encrypt</code> binary,as shown below.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-jsx" data-lang="jsx"><span class="line"><span class="cl"><span class="nx">krypton2</span><span class="err">@</span><span class="nx">krypton</span><span class="o">:</span><span class="err">/tmp/news$ echo &#34;ABC&#34;&gt; me.txt</span>
+</span></span><span class="line"><span class="cl"><span class="nx">krypton2</span><span class="err">@</span><span class="nx">krypton</span><span class="o">:</span><span class="err">/tmp/news$ /krypton/krypton2/encrypt me.txt </span>
+</span></span><span class="line"><span class="cl"><span class="nx">krypton2</span><span class="err">@</span><span class="nx">krypton</span><span class="o">:</span><span class="err">/tmp/news$ ls</span>
+</span></span><span class="line"><span class="cl"><span class="nx">ciphertext</span>  <span class="nx">encrypt</span>  <span class="nx">keyfile</span><span class="p">.</span><span class="nx">dat</span>  <span class="nx">krypton3</span>  <span class="nx">me</span><span class="p">.</span><span class="nx">txt</span>  <span class="nx">README</span>
+</span></span><span class="line"><span class="cl"><span class="nx">krypton2</span><span class="err">@</span><span class="nx">krypton</span><span class="o">:</span><span class="err">/tmp/news$ cat ciphertext </span>
+</span></span><span class="line"><span class="cl"><span class="nx">MNO</span>
+</span></span><span class="line"><span class="cl"><span class="nx">krypton2</span><span class="err">@</span><span class="nx">krypton</span><span class="o">:</span><span class="err">/tmp/news$ </span>
+</span></span></code></pre></div><p>From the output above, the key is 12, that is a forward shift of 12 (in simple terms the 12th alphabet from the initial letter, hence if A will be M then from B, we count to the 12th letter and that is what B will be)</p>
+<p>From the binary, it is clear the forward shift being used to encrypt text is 12. We can use a shift of ±13 to reverse our ciphertext to a readable text as shown below.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-jsx" data-lang="jsx"><span class="line"><span class="cl"><span class="nx">krypton2</span><span class="err">@</span><span class="nx">krypton</span><span class="o">:</span><span class="err">/tmp/news$ cat krypton3 | tr &#39;[M-ZA-Lm-za-l]&#39; &#39;[A-MN-Zam-n-z]&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">redacted</span><span class="p">]</span>
+</span></span></code></pre></div><p>The <code>tr</code> command</p>
+<p><code>tr</code> stands for <strong>translate</strong>. It replaces characters from one set with characters from another.</p>
+<p><code>'[M-ZA-Lm-za-l]'</code></p>
+<p>This set includes <strong>all letters</strong>, but <strong>rearranged</strong> in a Caesar-like shifted order:</p>
+<ul>
+<li><code>M-Z A-L</code> (uppercase)</li>
+<li><code>m-z a-l</code> (lowercase)</li>
+</ul>
+<p>This is essentially a Caesar cipher with a <strong>shift of 13</strong>, commonly known as <strong>ROT13</strong>.</p>
+<p><code>'[A-MN-Zam-n-z]'</code></p>
+<p>This is just the standard alphabet:</p>
+<ul>
+<li><code>A-M N-Z</code> (uppercase)</li>
+<li><code>a-m n-z</code> (lowercase)</li>
+</ul>
+<p>We have our password for the next level.</p>
+
+<h2 class="relative group">Krypton 3-4
+    <div id="krypton-3-4" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#krypton-3-4" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>We shall start by reading the <code>README</code> file to get the instructions for this level.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-jsx" data-lang="jsx"><span class="line"><span class="cl"><span class="nx">Well</span> <span class="nx">done</span><span class="p">.</span>  <span class="nx">You</span><span class="s1">&#39;ve moved past an easy substitution cipher.
+</span></span></span><span class="line"><span class="cl"><span class="s1">
+</span></span></span><span class="line"><span class="cl"><span class="s1">Hopefully you just encrypted the alphabet a plaintext 
+</span></span></span><span class="line"><span class="cl"><span class="s1">to fully expose the key in one swoop.
+</span></span></span><span class="line"><span class="cl"><span class="s1">
+</span></span></span><span class="line"><span class="cl"><span class="s1">The main weakness of a simple substitution cipher is 
+</span></span></span><span class="line"><span class="cl"><span class="s1">repeated use of a simple key.  In the previous exercise
+</span></span></span><span class="line"><span class="cl"><span class="s1">you were able to introduce arbitrary plaintext to expose
+</span></span></span><span class="line"><span class="cl"><span class="s1">the key.  In this example, the cipher mechanism is not 
+</span></span></span><span class="line"><span class="cl"><span class="s1">available to you, the attacker.
+</span></span></span><span class="line"><span class="cl"><span class="s1">
+</span></span></span><span class="line"><span class="cl"><span class="s1">However, you have been lucky.  You have intercepted more
+</span></span></span><span class="line"><span class="cl"><span class="s1">than one message.  The password to the next level is found
+</span></span></span><span class="line"><span class="cl"><span class="s1">in the file &#39;</span><span class="nx">krypton4</span><span class="err">&#39;</span><span class="p">.</span>  <span class="nx">You</span> <span class="nx">have</span> <span class="nx">also</span> <span class="nx">found</span> <span class="mi">3</span> <span class="nx">other</span> <span class="nx">files</span><span class="p">.</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="nx">found1</span><span class="p">,</span> <span class="nx">found2</span><span class="p">,</span> <span class="nx">found3</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">You</span> <span class="nx">know</span> <span class="nx">the</span> <span class="nx">following</span> <span class="nx">important</span> <span class="nx">details</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">-</span> <span class="nx">The</span> <span class="nx">message</span> <span class="nx">plaintexts</span> <span class="nx">are</span> <span class="k">in</span> <span class="nx">English</span> <span class="p">(</span><span class="o">***</span> <span class="nx">very</span> <span class="nx">important</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="o">-</span> <span class="nx">They</span> <span class="nx">were</span> <span class="nx">produced</span> <span class="nx">from</span> <span class="nx">the</span> <span class="nx">same</span> <span class="nx">key</span> <span class="p">(</span><span class="o">***</span> <span class="nx">even</span> <span class="nx">better</span><span class="o">!</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">Enjoy</span><span class="p">.</span>
+</span></span></code></pre></div><p>Moreover, we are provided with two hints and three found files as shown below.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-jsx" data-lang="jsx"><span class="line"><span class="cl"><span class="nx">krypton3</span><span class="err">@</span><span class="nx">krypton</span><span class="o">:</span><span class="err">/krypton/krypton3$ ls</span>
+</span></span><span class="line"><span class="cl"><span class="nx">found1</span>  <span class="nx">found2</span>  <span class="nx">found3</span>  <span class="nx">HINT1</span>  <span class="nx">HINT2</span>  <span class="nx">krypton4</span>  <span class="nx">README</span>
+</span></span><span class="line"><span class="cl"><span class="nx">krypton3</span><span class="err">@</span><span class="nx">krypton</span><span class="o">:</span><span class="err">/krypton/krypton3$ </span>
+</span></span></code></pre></div><p>Opening the two hint files, we get the following hints.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-jsx" data-lang="jsx"><span class="line"><span class="cl"><span class="nx">krypton3</span><span class="err">@</span><span class="nx">krypton</span><span class="o">:</span><span class="err">/krypton/krypton3$ cat HINT*</span>
+</span></span><span class="line"><span class="cl"><span class="nx">Some</span> <span class="nx">letters</span> <span class="nx">are</span> <span class="nx">more</span> <span class="nx">prevalent</span> <span class="k">in</span> <span class="nx">English</span> <span class="nx">than</span> <span class="nx">others</span><span class="p">.</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34;Frequency Analysis&#34;</span> <span class="nx">is</span> <span class="nx">your</span> <span class="nx">friend</span><span class="p">.</span>
+</span></span></code></pre></div><p>This is interesting, we have letters that are more prevalent than others, we can use some google fu to understand better what this means. From this <a
+  href="https://en.wikipedia.org/wiki/Frequency_analysis?ref=learnhacking.io"
+    target="_blank"
+  >link</a>, we get to understand more about what frequency analysis is. Further search online, we come across this <a
+  href="https://md5decrypt.net/en/Letters-frequency-analysis/?ref=learnhacking.io"
+    target="_blank"
+  >tool</a> that will help us in mapping out the frequency of letters in out cipher texts. The tool did not serve us much, we can try another tool like <a
+  href="https://quipqiup.com/"
+    target="_blank"
+  >quipquip</a> whereby, we shall use the contents of one of the found file then put the contents of the <code>krypton4</code> file at the end as shown below then click on solve to wait on the tool to give us a solution as shown below, in my case I concatenated found1 and krypton4 together, then uploaded the output to the tool for it to solve.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-jsx" data-lang="jsx"><span class="line"><span class="cl"><span class="nx">krypton3</span><span class="err">@</span><span class="nx">krypton</span><span class="o">:</span><span class="err">/krypton/krypton3$ cat found1 krypton4 </span>
+</span></span><span class="line"><span class="cl"><span class="nx">CGZNL</span> <span class="nx">YJBEN</span> <span class="nx">QYDLQ</span> <span class="nx">ZQSUQ</span> <span class="nx">NZCYD</span> <span class="nx">SNQVU</span> <span class="nx">BFGBK</span> <span class="nx">GQUQZ</span> <span class="nx">QSUQN</span> <span class="nx">UZCYD</span> <span class="nx">SNJDS</span> <span class="nx">UDCXJ</span> <span class="nx">ZCYDS</span> <span class="nx">NZQSU</span> <span class="nx">QNUZB</span> <span class="nx">WSBNZ</span> <span class="nx">QSUQN</span> <span class="nx">UDCXJ</span> <span class="nx">CUBGS</span> <span class="nx">BXJDS</span> <span class="nx">UCTYV</span> <span class="nx">SUJQG</span> <span class="nx">WTBUJ</span> <span class="nx">KCWSV</span> <span class="nx">LFGBK</span> <span class="nx">GSGZN</span> <span class="nx">LYJCB</span> <span class="nx">GJSZD</span> <span class="nx">GCHMS</span> <span class="nx">UCJCU</span> <span class="nx">QJLYS</span> <span class="nx">BXUMA</span> <span class="nx">UJCJM</span> <span class="nx">JCBGZ</span> <span class="nx">CYDSN</span> <span class="nx">CGKDC</span> <span class="nx">ZDSQZ</span> <span class="nx">DVSJJ</span> <span class="nx">SNCGJ</span> <span class="nx">DSYVQ</span> <span class="nx">CGJSO</span> <span class="nx">JCUNS</span> <span class="nx">YVQZS</span> <span class="nx">WALQV</span> <span class="nx">SJJSN</span> <span class="nx">UBTSX</span> <span class="nx">COSWG</span> <span class="nx">MTASN</span> <span class="nx">BXYBU</span> <span class="nx">CJCBG</span> <span class="nx">UWBKG</span> <span class="nx">JDSQV</span> <span class="nx">YDQAS</span> <span class="nx">JXBNS</span> <span class="nx">OQTYV</span> <span class="nx">SKCJD</span> <span class="nx">QUDCX</span> <span class="nx">JBXQK</span> <span class="nx">BMVWA</span> <span class="nx">SNSYV</span> <span class="nx">QZSWA</span> <span class="nx">LWAKB</span> <span class="nx">MVWAS</span> <span class="nx">ZBTSS</span> <span class="nx">QGWUB</span> <span class="nx">BGJDS</span> <span class="nx">TSJDB</span> <span class="nx">WCUGQ</span> <span class="nx">TSWQX</span> <span class="nx">JSNRM</span> <span class="nx">VCMUZ</span> <span class="nx">QSUQN</span> <span class="nx">KDBMU</span> <span class="nx">SWCJJ</span> <span class="nx">BZBTT</span> <span class="nx">MGCZQ</span> <span class="nx">JSKCJ</span> <span class="nx">DDCUE</span> <span class="nx">SGSNQ</span> <span class="nx">VUJDS</span> <span class="nx">SGZNL</span> <span class="nx">YJCBG</span> <span class="nx">UJSYY</span> <span class="nx">SNXBN</span> <span class="nx">TSWAL</span> <span class="nx">QZQSU</span> <span class="nx">QNZCY</span> <span class="nx">DSNCU</span> <span class="nx">BXJSG</span> <span class="nx">CGZBN</span> <span class="nx">YBNQJ</span> <span class="nx">SWQUY</span> <span class="nx">QNJBX</span> <span class="nx">TBNSZ</span> <span class="nx">BTYVS</span> <span class="nx">OUZDS</span> <span class="nx">TSUUM</span> <span class="nx">ZDQUJ</span> <span class="nx">DSICE</span> <span class="nx">SGNSZ</span> <span class="nx">CYDSN</span> <span class="nx">QGWUJ</span> <span class="nx">CVVDQ</span> <span class="nx">UTBWS</span> <span class="nx">NGQYY</span> <span class="nx">VCZQJ</span> <span class="nx">CBGCG</span> <span class="nx">JDSNB</span> <span class="nx">JULUJ</span> <span class="nx">STQUK</span> <span class="nx">CJDQV</span> <span class="nx">VUCGE</span> <span class="nx">VSQVY</span> <span class="nx">DQASJ</span> <span class="nx">UMAUJ</span> <span class="nx">CJMJC</span> <span class="nx">BGZCY</span> <span class="nx">DSNUJ</span> <span class="nx">DSZQS</span> <span class="nx">UQNZC</span> <span class="nx">YDSNC</span> <span class="nx">USQUC</span> <span class="nx">VLANB</span> <span class="nx">FSGQG</span> <span class="nx">WCGYN</span> <span class="nx">QZJCZ</span> <span class="nx">SBXXS</span> <span class="nx">NUSUU</span> <span class="nx">SGJCQ</span> <span class="nx">VVLGB</span> <span class="nx">ZBTTM</span> <span class="nx">GCZQJ</span> <span class="nx">CBGUS</span> <span class="nx">ZMNCJ</span> <span class="nx">LUDQF</span> <span class="nx">SUYSQ</span> <span class="nx">NSYNB</span> <span class="nx">WMZSW</span> <span class="nx">TBUJB</span> <span class="nx">XDCUF</span> <span class="nx">GBKGK</span> <span class="nx">BNFAS</span> <span class="nx">JKSSG</span> <span class="nx">QGWDC</span> <span class="nx">USQNV</span> <span class="nx">LYVQL</span> <span class="nx">UKSNS</span> <span class="nx">TQCGV</span> <span class="nx">LZBTS</span> <span class="nx">WCSUQ</span> <span class="nx">GWDCU</span> <span class="nx">JBNCS</span> <span class="nx">UESGN</span> <span class="nx">SUDSN</span> <span class="nx">QCUSW</span> <span class="nx">JBJDS</span> <span class="nx">YSQFB</span> <span class="nx">XUBYD</span> <span class="nx">CUJCZ</span> <span class="nx">QJCBG</span> <span class="nx">QGWQN</span> <span class="nx">JCUJN</span> <span class="nx">LALJD</span> <span class="nx">SSGWB</span> <span class="nx">XJDSU</span> <span class="nx">COJSS</span> <span class="nx">GJDZS</span> <span class="nx">GJMNL</span> <span class="nx">GSOJD</span> <span class="nx">SKNBJ</span> <span class="nx">STQCG</span> <span class="nx">VLJNQ</span> <span class="nx">ESWCS</span> <span class="nx">UMGJC</span> <span class="nx">VQABM</span> <span class="nx">JCGZV</span> <span class="nx">MWCGE</span> <span class="nx">DQTVS</span> <span class="nx">JFCGE</span> <span class="nx">VSQNQ</span> <span class="nx">GWTQZ</span> <span class="nx">ASJDZ</span> <span class="nx">BGUCW</span> <span class="nx">SNSWU</span> <span class="nx">BTSBX</span> <span class="nx">JDSXC</span> <span class="nx">GSUJS</span> <span class="nx">OQTYV</span> <span class="nx">SUCGJ</span> <span class="nx">DSSGE</span> <span class="nx">VCUDV</span> <span class="nx">QGEMQ</span> <span class="nx">ESCGD</span> <span class="nx">CUVQU</span> <span class="nx">JYDQU</span> <span class="nx">SDSKN</span> <span class="nx">BJSJN</span> <span class="nx">QECZB</span> <span class="nx">TSWCS</span> <span class="nx">UQVUB</span> <span class="nx">FGBKG</span> <span class="nx">QUNBT</span> <span class="nx">QGZSU</span> <span class="nx">QGWZB</span> <span class="nx">VVQAB</span> <span class="nx">NQJSW</span> <span class="nx">KCJDB</span> <span class="nx">JDSNY</span> <span class="nx">VQLKN</span> <span class="nx">CEDJU</span> <span class="nx">TQGLB</span> <span class="nx">XDCUY</span> <span class="nx">VQLUK</span> <span class="nx">SNSYM</span> <span class="nx">AVCUD</span> <span class="nx">SWCGS</span> <span class="nx">WCJCB</span> <span class="nx">GUBXI</span> <span class="nx">QNLCG</span> <span class="nx">EHMQV</span> <span class="nx">CJLQG</span> <span class="nx">WQZZM</span> <span class="nx">NQZLW</span> <span class="nx">MNCGE</span> <span class="nx">DCUVC</span> <span class="nx">XSJCT</span> <span class="nx">SQGWC</span> <span class="nx">GJKBB</span> <span class="nx">XDCUX</span> <span class="nx">BNTSN</span> <span class="nx">JDSQJ</span> <span class="nx">NCZQV</span> <span class="nx">ZBVVS</span> <span class="nx">QEMSU</span> <span class="nx">YMAVC</span> <span class="nx">UDSWJ</span> <span class="nx">DSXCN</span> <span class="nx">UJXBV</span> <span class="nx">CBQZB</span> <span class="nx">VVSZJ</span> <span class="nx">SWSWC</span> <span class="nx">JCBGB</span> <span class="nx">XDCUW</span> <span class="nx">NQTQJ</span> <span class="nx">CZKBN</span> <span class="nx">FUJDQ</span> <span class="nx">JCGZV</span> <span class="nx">MWSWQ</span> <span class="nx">VVAMJ</span> <span class="nx">JKBBX</span> <span class="nx">JDSYV</span> <span class="nx">QLUGB</span> <span class="nx">KNSZB</span> <span class="nx">EGCUS</span> <span class="nx">WQUUD</span> <span class="nx">QFSUY</span> <span class="nx">SQNSU</span> <span class="nx">KSVVW</span> <span class="nx">BGSJD</span> <span class="nx">SVSIS</span> <span class="nx">VXBMN</span> <span class="nx">YQUUK</span> <span class="nx">BNWCU</span> <span class="nx">ANMJS</span>
+</span></span></code></pre></div><figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="auto"
+    alt="image.png"
+    width="1607"
+    height="538"
+    src="/posts/krypton/image_hu_3d03d4da68f7ff5f.png"
+    srcset="/posts/krypton/image_hu_3d03d4da68f7ff5f.png 800w, /posts/krypton/image_hu_df2839bfe833d2f6.png 1280w"
+    sizes="(min-width: 768px) 50vw, 65vw"
+    data-zoom-src="/posts/krypton/image.png"></figure>
+<p>With that, we now have the password for the next level.</p>
+
+<h2 class="relative group">Krypton 4-5
+    <div id="krypton-4-5" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#krypton-4-5" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Just like the other challenges, we shall start by first reading the <code>README</code> file to see what is required of us.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-jsx" data-lang="jsx"><span class="line"><span class="cl"><span class="nx">Good</span> <span class="nx">job</span><span class="o">!</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">You</span> <span class="nx">more</span> <span class="nx">than</span> <span class="nx">likely</span> <span class="nx">used</span> <span class="nx">frequency</span> <span class="nx">analysis</span> <span class="nx">and</span> <span class="nx">some</span> <span class="nx">common</span> <span class="nx">sense</span>
+</span></span><span class="line"><span class="cl"><span class="nx">to</span> <span class="nx">solve</span> <span class="nx">that</span> <span class="nx">one</span><span class="p">.</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">So</span> <span class="nx">far</span> <span class="nx">we</span> <span class="nx">have</span> <span class="nx">worked</span> <span class="kd">with</span> <span class="nx">simple</span> <span class="nx">substitution</span> <span class="nx">ciphers</span><span class="p">.</span>  <span class="nx">They</span> <span class="nx">have</span>
+</span></span><span class="line"><span class="cl"><span class="nx">also</span> <span class="nx">been</span> <span class="s1">&#39;monoalphabetic&#39;</span><span class="p">,</span> <span class="nx">meaning</span> <span class="nx">using</span> <span class="nx">a</span> <span class="nx">fixed</span> <span class="nx">key</span><span class="p">,</span> <span class="nx">and</span> 
+</span></span><span class="line"><span class="cl"><span class="nx">giving</span> <span class="nx">a</span> <span class="nx">one</span> <span class="nx">to</span> <span class="nx">one</span> <span class="nx">mapping</span> <span class="k">of</span> <span class="nx">plaintext</span> <span class="p">(</span><span class="nx">P</span><span class="p">)</span> <span class="nx">to</span> <span class="nx">ciphertext</span> <span class="p">(</span><span class="nx">C</span><span class="p">).</span>
+</span></span><span class="line"><span class="cl"><span class="nx">Another</span> <span class="nx">type</span> <span class="k">of</span> <span class="nx">substitution</span> <span class="nx">cipher</span> <span class="nx">is</span> <span class="nx">referred</span> <span class="nx">to</span> <span class="nx">as</span> <span class="s1">&#39;polyalphabetic&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="nx">where</span> <span class="nx">one</span> <span class="nx">character</span> <span class="k">of</span> <span class="nx">P</span> <span class="nx">may</span> <span class="nx">map</span> <span class="nx">to</span> <span class="nx">many</span><span class="p">,</span> <span class="nx">or</span> <span class="nx">all</span><span class="p">,</span> <span class="nx">possible</span> <span class="nx">ciphertext</span> 
+</span></span><span class="line"><span class="cl"><span class="nx">characters</span><span class="p">.</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">An</span> <span class="nx">example</span> <span class="k">of</span> <span class="nx">a</span> <span class="nx">polyalphabetic</span> <span class="nx">cipher</span> <span class="nx">is</span> <span class="nx">called</span> <span class="nx">a</span> <span class="nx">Vigen</span><span class="err">�</span><span class="nx">re</span> <span class="nx">Cipher</span><span class="p">.</span>  <span class="nx">It</span> <span class="nx">works</span>
+</span></span><span class="line"><span class="cl"><span class="nx">like</span> <span class="k">this</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">If</span> <span class="nx">we</span> <span class="nx">use</span> <span class="nx">the</span> <span class="nx">key</span><span class="p">(</span><span class="nx">K</span><span class="p">)</span>  <span class="s1">&#39;GOLD&#39;</span><span class="p">,</span> <span class="nx">and</span> <span class="nx">P</span> <span class="o">=</span> <span class="nx">PROCEED</span> <span class="nx">MEETING</span> <span class="nx">AS</span> <span class="nx">AGREED</span><span class="p">,</span> <span class="nx">then</span> <span class="s2">&#34;add&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">P</span> <span class="nx">to</span> <span class="nx">K</span><span class="p">,</span> <span class="nx">we</span> <span class="nx">get</span> <span class="nx">C</span><span class="p">.</span>  <span class="nx">When</span> <span class="nx">adding</span><span class="p">,</span> <span class="k">if</span> <span class="nx">we</span> <span class="nx">exceed</span> <span class="mi">25</span><span class="p">,</span> <span class="nx">then</span> <span class="nx">we</span> <span class="nx">roll</span> <span class="nx">to</span> <span class="mi">0</span> <span class="p">(</span><span class="nx">modulo</span> <span class="mi">26</span><span class="p">).</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">P</span>     <span class="nx">P</span> <span class="nx">R</span> <span class="nx">O</span> <span class="nx">C</span> <span class="nx">E</span>   <span class="nx">E</span> <span class="nx">D</span> <span class="nx">M</span> <span class="nx">E</span> <span class="nx">E</span>   <span class="nx">T</span> <span class="nx">I</span> <span class="nx">N</span> <span class="nx">G</span> <span class="nx">A</span>   <span class="nx">S</span> <span class="nx">A</span> <span class="nx">G</span> <span class="nx">R</span> <span class="nx">E</span>   <span class="nx">E</span> <span class="nx">D</span>
+</span></span><span class="line"><span class="cl"><span class="nx">K</span>     <span class="nx">G</span> <span class="nx">O</span> <span class="nx">L</span> <span class="nx">D</span> <span class="nx">G</span>   <span class="nx">O</span> <span class="nx">L</span> <span class="nx">D</span> <span class="nx">G</span> <span class="nx">O</span>   <span class="nx">L</span> <span class="nx">D</span> <span class="nx">G</span> <span class="nx">O</span> <span class="nx">L</span>   <span class="nx">D</span> <span class="nx">G</span> <span class="nx">O</span> <span class="nx">L</span> <span class="nx">D</span>   <span class="nx">G</span> <span class="nx">O</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">becomes</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">P</span>     <span class="mi">15</span> <span class="mi">17</span> <span class="mi">14</span> <span class="mi">2</span>  <span class="mi">4</span>  <span class="mi">4</span>  <span class="mi">3</span> <span class="mi">12</span>  <span class="mi">4</span> <span class="mi">4</span>  <span class="mi">19</span>  <span class="mi">8</span> <span class="mi">13</span> <span class="mi">6</span>  <span class="mi">0</span>  <span class="mi">18</span> <span class="mi">0</span>  <span class="mi">6</span> <span class="mi">17</span> <span class="mi">4</span> <span class="mi">4</span>   <span class="mi">3</span>
+</span></span><span class="line"><span class="cl"><span class="nx">K</span>     <span class="mi">6</span>  <span class="mi">14</span> <span class="mi">11</span> <span class="mi">3</span>  <span class="mi">6</span> <span class="mi">14</span> <span class="mi">11</span>  <span class="mi">3</span>  <span class="mi">6</span> <span class="mi">14</span> <span class="mi">11</span>  <span class="mi">3</span>  <span class="mi">6</span> <span class="mi">14</span> <span class="mi">11</span>  <span class="mi">3</span> <span class="mi">6</span> <span class="mi">14</span> <span class="mi">11</span> <span class="mi">3</span> <span class="mi">6</span>  <span class="mi">14</span>
+</span></span><span class="line"><span class="cl"><span class="nx">C</span>     <span class="mi">21</span> <span class="mi">5</span>  <span class="mi">25</span> <span class="mi">5</span> <span class="mi">10</span> <span class="mi">18</span> <span class="mi">14</span> <span class="mi">15</span> <span class="mi">10</span> <span class="mi">18</span>  <span class="mi">4</span> <span class="mi">11</span> <span class="mi">19</span> <span class="mi">20</span> <span class="mi">11</span> <span class="mi">21</span> <span class="mi">6</span> <span class="mi">20</span>  <span class="mi">2</span> <span class="mi">8</span> <span class="mi">10</span> <span class="mi">17</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">So</span><span class="p">,</span> <span class="nx">we</span> <span class="nx">get</span> <span class="nx">a</span> <span class="nx">ciphertext</span> <span class="k">of</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">VFZFK</span> <span class="nx">SOPKS</span> <span class="nx">ELTUL</span> <span class="nx">VGUCH</span> <span class="nx">KR</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">This</span> <span class="nx">level</span> <span class="nx">is</span> <span class="nx">a</span> <span class="nx">Vigen</span><span class="err">�</span><span class="nx">re</span> <span class="nx">Cipher</span><span class="p">.</span>  <span class="nx">You</span> <span class="nx">have</span> <span class="nx">intercepted</span> <span class="nx">two</span> <span class="nx">longer</span><span class="p">,</span> <span class="nx">english</span> 
+</span></span><span class="line"><span class="cl"><span class="nx">language</span> <span class="nx">messages</span><span class="p">.</span>  <span class="nx">You</span> <span class="nx">also</span> <span class="nx">have</span> <span class="nx">a</span> <span class="nx">key</span> <span class="nx">piece</span> <span class="k">of</span> <span class="nx">information</span><span class="p">.</span>  <span class="nx">You</span> <span class="nx">know</span> <span class="nx">the</span> 
+</span></span><span class="line"><span class="cl"><span class="nx">key</span> <span class="nx">length</span><span class="o">!</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">For</span> <span class="k">this</span> <span class="nx">exercise</span><span class="p">,</span> <span class="nx">the</span> <span class="nx">key</span> <span class="nx">length</span> <span class="nx">is</span> <span class="mf">6.</span>  <span class="nx">The</span> <span class="nx">password</span> <span class="nx">to</span> <span class="nx">level</span> <span class="nx">five</span> <span class="nx">is</span> <span class="k">in</span> <span class="nx">the</span> <span class="nx">usual</span>
+</span></span><span class="line"><span class="cl"><span class="nx">place</span><span class="p">,</span> <span class="nx">encrypted</span> <span class="kd">with</span> <span class="nx">the</span> <span class="mi">6</span> <span class="nx">letter</span> <span class="nx">key</span><span class="p">.</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">Have</span> <span class="nx">fun</span><span class="o">!</span>
+</span></span></code></pre></div><p>As stated in the README file, we are using the vigenere cipher, one of the poly-alphabetic ciphers. Moreover, from the description, the key length we are told is 6.</p>
+<p>For this case, we shall use online tools to get the key from the found file texts then use the key to decrypt the message on the file <code>krypton5</code>. The tool we shall use is this <a
+  href="https://www.dcode.fr/vigenere-cipher"
+    target="_blank"
+  >one</a>.</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="image.png"
+    src="image%201.png"
+    ></figure>
+<p>From the screenshot above, we have found the key to use to decrypt the password for the next level,  we shall open a new tab and input the found key to decrypt the cipher text as shown below.</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="image.png"
+    src="image%202.png"
+    ></figure>
+
+<h2 class="relative group">Krypton 5-6
+    <div id="krypton-5-6" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#krypton-5-6" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>We start by reading the readme file as usual to get an understanding of the cipher or encryption algorithm we are about to deal with.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-jsx" data-lang="jsx"><span class="line"><span class="cl"><span class="nx">Frequency</span> <span class="nx">analysis</span> <span class="nx">can</span> <span class="k">break</span> <span class="nx">a</span> <span class="nx">known</span> <span class="nx">key</span> <span class="nx">length</span> <span class="nx">as</span> <span class="nx">well</span><span class="p">.</span>  <span class="nx">Lets</span> <span class="k">try</span> <span class="nx">one</span>
+</span></span><span class="line"><span class="cl"><span class="nx">last</span> <span class="nx">polyalphabetic</span> <span class="nx">cipher</span><span class="p">,</span> <span class="nx">but</span> <span class="k">this</span> <span class="nx">time</span> <span class="nx">the</span> <span class="nx">key</span> <span class="nx">length</span> <span class="nx">is</span> <span class="nx">unknown</span><span class="p">.</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">Enjoy</span><span class="p">.</span>
+</span></span></code></pre></div><p>From the description, we need to perform some sort of brute force to get the key length we can use. We shall use the same <a
+  href="https://www.dcode.fr/vigenere-cipher"
+    target="_blank"
+  >tool</a> as the one we used in level 4</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="image.png"
+    src="image%203.png"
+    ></figure>
+<p>As seen above, we have been able to get the key by using the cipher text from <code>found1</code> file and the key-length as well. We can use this key to decrypt the cipher text for password for level 6 as shown below.</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="image.png"
+    src="image%204.png"
+    ></figure>
+
+<h2 class="relative group">Krypton 6-7
+    <div id="krypton-6-7" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#krypton-6-7" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>From the <code>README</code> file, we get the following information.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-jsx" data-lang="jsx"><span class="line"><span class="cl"><span class="nx">Hopefully</span> <span class="nx">by</span> <span class="nx">now</span> <span class="nx">its</span> <span class="nx">obvious</span> <span class="nx">that</span> <span class="nx">encryption</span> <span class="nx">using</span> <span class="nx">repeating</span> <span class="nx">keys</span>
+</span></span><span class="line"><span class="cl"><span class="nx">is</span> <span class="nx">a</span> <span class="nx">bad</span> <span class="nx">idea</span><span class="p">.</span>  <span class="nx">Frequency</span> <span class="nx">analysis</span> <span class="nx">can</span> <span class="nx">destroy</span> <span class="nx">repeating</span><span class="o">/</span><span class="nx">fixed</span> <span class="nx">key</span>
+</span></span><span class="line"><span class="cl"><span class="nx">substitution</span> <span class="nx">crypto</span><span class="p">.</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">A</span> <span class="nx">feature</span> <span class="k">of</span> <span class="nx">good</span> <span class="nx">crypto</span> <span class="nx">is</span> <span class="nx">random</span> <span class="nx">ciphertext</span><span class="p">.</span>  <span class="nx">A</span> <span class="nx">good</span> <span class="nx">cipher</span> <span class="nx">must</span>
+</span></span><span class="line"><span class="cl"><span class="nx">not</span> <span class="nx">reveal</span> <span class="nx">any</span> <span class="nx">clues</span> <span class="nx">about</span> <span class="nx">the</span> <span class="nx">plaintext</span><span class="p">.</span>  <span class="nx">Since</span> <span class="nx">natural</span> <span class="nx">language</span> 
+</span></span><span class="line"><span class="cl"><span class="nx">plaintext</span> <span class="p">(</span><span class="k">in</span> <span class="k">this</span> <span class="k">case</span><span class="p">,</span> <span class="nx">English</span><span class="p">)</span> <span class="nx">contains</span> <span class="nx">patterns</span><span class="p">,</span> <span class="nx">it</span> <span class="nx">is</span> <span class="nx">left</span> <span class="nx">up</span>
+</span></span><span class="line"><span class="cl"><span class="nx">to</span> <span class="nx">the</span> <span class="nx">encryption</span> <span class="nx">key</span> <span class="nx">or</span> <span class="nx">the</span> <span class="nx">encryption</span> <span class="nx">algorithm</span> <span class="nx">to</span> <span class="nx">add</span> <span class="nx">the</span> 
+</span></span><span class="line"><span class="cl"><span class="s1">&#39;randomness&#39;</span><span class="p">.</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">Modern</span> <span class="nx">ciphers</span> <span class="nx">are</span> <span class="nx">similar</span> <span class="nx">to</span> <span class="nx">older</span> <span class="nx">plain</span> <span class="nx">substitution</span> 
+</span></span><span class="line"><span class="cl"><span class="nx">ciphers</span><span class="p">,</span> <span class="nx">but</span> <span class="nx">improve</span> <span class="nx">the</span> <span class="s1">&#39;random&#39;</span> <span class="nx">nature</span> <span class="k">of</span> <span class="nx">the</span> <span class="nx">key</span><span class="p">.</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">An</span> <span class="nx">example</span> <span class="k">of</span> <span class="nx">an</span> <span class="nx">older</span> <span class="nx">cipher</span> <span class="nx">using</span> <span class="nx">a</span> <span class="nx">complex</span><span class="p">,</span> <span class="nx">random</span><span class="p">,</span> <span class="nx">large</span> <span class="nx">key</span>
+</span></span><span class="line"><span class="cl"><span class="nx">is</span> <span class="nx">a</span> <span class="nx">vigniere</span> <span class="nx">using</span> <span class="nx">a</span> <span class="nx">key</span> <span class="k">of</span> <span class="nx">the</span> <span class="nx">same</span> <span class="nx">size</span> <span class="k">of</span> <span class="nx">the</span> <span class="nx">plaintext</span><span class="p">.</span>  <span class="nx">For</span>
+</span></span><span class="line"><span class="cl"><span class="nx">example</span><span class="p">,</span> <span class="nx">imagine</span> <span class="nx">you</span> <span class="nx">and</span> <span class="nx">your</span> <span class="nx">confident</span> <span class="nx">have</span> <span class="nx">agreed</span> <span class="nx">on</span> <span class="nx">a</span> <span class="nx">key</span> <span class="nx">using</span>
+</span></span><span class="line"><span class="cl"><span class="nx">the</span> <span class="nx">book</span> <span class="s1">&#39;A Tale of Two Cities&#39;</span> <span class="nx">as</span> <span class="nx">your</span> <span class="nx">key</span><span class="p">,</span> <span class="k">in</span> <span class="mi">256</span> <span class="kr">byte</span> <span class="nx">blocks</span><span class="p">.</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">The</span> <span class="nx">cipher</span> <span class="nx">works</span> <span class="nx">as</span> <span class="nx">such</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">Each</span> <span class="nx">plaintext</span> <span class="nx">message</span> <span class="nx">is</span> <span class="nx">broken</span> <span class="nx">into</span> <span class="mi">256</span> <span class="kr">byte</span> <span class="nx">blocks</span><span class="p">.</span>  <span class="nx">For</span> <span class="nx">each</span> 
+</span></span><span class="line"><span class="cl"><span class="nx">block</span> <span class="k">of</span> <span class="nx">plaintext</span><span class="p">,</span> <span class="nx">a</span> <span class="nx">corresponding</span> <span class="mi">256</span> <span class="kr">byte</span> <span class="nx">block</span> <span class="nx">from</span> <span class="nx">the</span> <span class="nx">book</span>
+</span></span><span class="line"><span class="cl"><span class="nx">is</span> <span class="nx">used</span> <span class="nx">as</span> <span class="nx">the</span> <span class="nx">key</span><span class="p">,</span> <span class="nx">starting</span> <span class="nx">from</span> <span class="nx">the</span> <span class="nx">first</span> <span class="nx">chapter</span><span class="p">,</span> <span class="nx">and</span> <span class="nx">progressing</span><span class="p">.</span>
+</span></span><span class="line"><span class="cl"><span class="nx">No</span> <span class="nx">part</span> <span class="k">of</span> <span class="nx">the</span> <span class="nx">book</span> <span class="nx">is</span> <span class="nx">ever</span> <span class="nx">re</span><span class="o">-</span><span class="nx">used</span> <span class="nx">as</span> <span class="nx">key</span><span class="p">.</span>  <span class="nx">The</span> <span class="nx">use</span> <span class="k">of</span> <span class="nx">a</span> <span class="nx">key</span> <span class="k">of</span> <span class="nx">the</span> 
+</span></span><span class="line"><span class="cl"><span class="nx">same</span> <span class="nx">length</span> <span class="nx">as</span> <span class="nx">the</span> <span class="nx">plaintext</span><span class="p">,</span> <span class="nx">and</span> <span class="nx">only</span> <span class="nx">using</span> <span class="nx">it</span> <span class="nx">once</span> <span class="nx">is</span> <span class="nx">called</span> <span class="nx">a</span> <span class="s2">&#34;One Time Pad&#34;</span><span class="p">.</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">Look</span> <span class="k">in</span> <span class="nx">the</span> <span class="nx">krypton6</span><span class="o">/</span><span class="nx">onetime</span>  <span class="nx">directory</span><span class="p">.</span>  <span class="nx">You</span> <span class="nx">will</span> <span class="nx">find</span> <span class="nx">a</span> <span class="nx">file</span> <span class="nx">called</span> <span class="s1">&#39;plain1&#39;</span><span class="p">,</span> <span class="nx">a</span> <span class="mi">256</span> 
+</span></span><span class="line"><span class="cl"><span class="kr">byte</span> <span class="nx">block</span><span class="p">.</span>  <span class="nx">You</span> <span class="nx">will</span> <span class="nx">also</span> <span class="nx">see</span> <span class="nx">a</span> <span class="nx">file</span> <span class="s1">&#39;key1&#39;</span><span class="p">,</span> <span class="nx">the</span> <span class="nx">first</span> <span class="mi">256</span> <span class="nx">bytes</span> <span class="k">of</span>
+</span></span><span class="line"><span class="cl"><span class="s1">&#39;A Tale of Two Cities&#39;</span><span class="p">.</span>  <span class="nx">The</span> <span class="nx">file</span> <span class="s1">&#39;cipher1&#39;</span> <span class="nx">is</span> <span class="nx">the</span> <span class="nx">cipher</span> <span class="nx">text</span> <span class="k">of</span> 
+</span></span><span class="line"><span class="cl"><span class="nx">plain1</span><span class="p">.</span>  <span class="nx">As</span> <span class="nx">you</span> <span class="nx">can</span> <span class="nx">see</span> <span class="p">(</span><span class="nx">and</span> <span class="k">try</span><span class="p">)</span> <span class="nx">it</span> <span class="nx">is</span> <span class="nx">very</span> <span class="nx">difficult</span> <span class="nx">to</span> <span class="k">break</span>
+</span></span><span class="line"><span class="cl"><span class="nx">the</span> <span class="nx">cipher</span> <span class="nx">without</span> <span class="nx">the</span> <span class="nx">key</span> <span class="nx">knowledge</span><span class="p">.</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="nx">NOTE</span> <span class="o">-</span> <span class="nx">it</span> <span class="nx">is</span> <span class="nx">possible</span> <span class="nx">though</span><span class="p">.</span>  <span class="nx">Using</span> <span class="nx">plain</span> <span class="nx">language</span> <span class="nx">as</span> <span class="nx">a</span> <span class="nx">one</span> <span class="nx">time</span> <span class="nx">pad</span>
+</span></span><span class="line"><span class="cl"><span class="nx">key</span> <span class="nx">has</span> <span class="nx">a</span> <span class="nx">weakness</span><span class="p">.</span>  <span class="nx">As</span> <span class="nx">a</span> <span class="nx">secondary</span> <span class="nx">challenge</span><span class="p">,</span> <span class="nx">open</span> <span class="nx">README</span> <span class="k">in</span> <span class="nx">that</span> <span class="nx">directory</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">If</span> <span class="nx">the</span> <span class="nx">encryption</span> <span class="nx">is</span> <span class="nx">truly</span> <span class="nx">random</span> <span class="nx">letters</span><span class="p">,</span> <span class="nx">and</span> <span class="nx">only</span> <span class="nx">used</span> <span class="nx">once</span><span class="p">,</span> <span class="nx">then</span> <span class="nx">it</span>
+</span></span><span class="line"><span class="cl"><span class="nx">is</span> <span class="nx">impossible</span> <span class="nx">to</span> <span class="k">break</span><span class="p">.</span>  <span class="nx">A</span> <span class="nx">truly</span> <span class="nx">random</span> <span class="s2">&#34;One Time Pad&#34;</span> <span class="nx">key</span> <span class="nx">cannot</span> <span class="nx">be</span>
+</span></span><span class="line"><span class="cl"><span class="nx">broken</span><span class="p">.</span>  <span class="nx">Consider</span> <span class="nx">intercepting</span> <span class="nx">a</span> <span class="nx">ciphertext</span> <span class="nx">message</span> <span class="k">of</span> <span class="mi">1000</span> <span class="nx">bytes</span><span class="p">.</span>  <span class="nx">One</span>
+</span></span><span class="line"><span class="cl"><span class="nx">could</span> <span class="nx">brute</span> <span class="nx">force</span> <span class="k">for</span> <span class="nx">the</span> <span class="nx">key</span><span class="p">,</span> <span class="nx">but</span> <span class="nx">due</span> <span class="nx">to</span> <span class="nx">the</span> <span class="nx">random</span> <span class="nx">key</span> <span class="nx">nature</span><span class="p">,</span> <span class="nx">you</span> <span class="nx">would</span>
+</span></span><span class="line"><span class="cl"><span class="nx">produce</span> <span class="nx">every</span> <span class="nx">single</span> <span class="nx">valid</span> <span class="mi">1000</span> <span class="nx">letter</span> <span class="nx">plaintext</span> <span class="nx">as</span> <span class="nx">well</span><span class="p">.</span>  <span class="nx">Who</span> <span class="nx">is</span> <span class="nx">to</span> <span class="nx">know</span>
+</span></span><span class="line"><span class="cl"><span class="nx">which</span> <span class="nx">is</span> <span class="nx">the</span> <span class="nx">real</span> <span class="nx">plaintext</span><span class="o">?!?</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">Choosing</span> <span class="nx">keys</span> <span class="nx">that</span> <span class="nx">are</span> <span class="nx">the</span> <span class="nx">same</span> <span class="nx">size</span> <span class="nx">as</span> <span class="nx">the</span> <span class="nx">plaintext</span> <span class="nx">is</span> <span class="nx">impractical</span><span class="p">.</span>
+</span></span><span class="line"><span class="cl"><span class="nx">Therefore</span><span class="p">,</span> <span class="nx">other</span> <span class="nx">methods</span> <span class="nx">must</span> <span class="nx">be</span> <span class="nx">used</span> <span class="nx">to</span> <span class="nx">obscure</span> <span class="nx">ciphertext</span> <span class="nx">against</span> 
+</span></span><span class="line"><span class="cl"><span class="nx">frequency</span> <span class="nx">analysis</span> <span class="k">in</span> <span class="nx">a</span> <span class="nx">simple</span> <span class="nx">substitution</span> <span class="nx">cipher</span><span class="p">.</span>  <span class="nx">The</span>
+</span></span><span class="line"><span class="cl"><span class="nx">impracticality</span> <span class="k">of</span> <span class="nx">an</span> <span class="s1">&#39;infinite&#39;</span> <span class="nx">key</span> <span class="nx">means</span> <span class="nx">that</span> <span class="nx">the</span> <span class="nx">randomness</span><span class="p">,</span> <span class="nx">or</span>
+</span></span><span class="line"><span class="cl"><span class="nx">entropy</span><span class="p">,</span> <span class="k">of</span> <span class="nx">the</span> <span class="nx">encryption</span> <span class="nx">is</span> <span class="nx">introduced</span> <span class="nx">via</span> <span class="nx">the</span> <span class="nx">method</span><span class="p">.</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">We</span> <span class="nx">have</span> <span class="nx">seen</span> <span class="nx">the</span> <span class="nx">method</span> <span class="k">of</span> <span class="s1">&#39;substitution&#39;</span><span class="p">.</span>  <span class="nx">Even</span> <span class="k">in</span> <span class="nx">modern</span> <span class="nx">crypto</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="nx">substitution</span> <span class="nx">is</span> <span class="nx">a</span> <span class="nx">valid</span> <span class="nx">technique</span><span class="p">.</span>  <span class="nx">Another</span> <span class="nx">technique</span> <span class="nx">is</span> <span class="s1">&#39;transposition&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="nx">or</span> <span class="nx">swapping</span> <span class="k">of</span> <span class="nx">bytes</span><span class="p">.</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">Modern</span> <span class="nx">ciphers</span> <span class="k">break</span> <span class="nx">into</span> <span class="nx">two</span> <span class="nx">types</span><span class="p">;</span> <span class="nx">symmetric</span> <span class="nx">and</span> <span class="nx">asymmetric</span><span class="p">.</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">Symmetric</span> <span class="nx">ciphers</span> <span class="nx">come</span> <span class="k">in</span> <span class="nx">two</span> <span class="nx">flavours</span><span class="o">:</span> <span class="nx">block</span> <span class="nx">and</span> <span class="nx">stream</span><span class="p">.</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">Until</span> <span class="nx">now</span><span class="p">,</span> <span class="nx">we</span> <span class="nx">have</span> <span class="nx">been</span> <span class="nx">playing</span> <span class="kd">with</span> <span class="nx">classical</span> <span class="nx">ciphers</span><span class="p">,</span> <span class="nx">approximating</span>
+</span></span><span class="line"><span class="cl"><span class="s1">&#39;block&#39;</span> <span class="nx">ciphers</span><span class="p">.</span>  <span class="nx">A</span> <span class="nx">block</span> <span class="nx">cipher</span> <span class="nx">is</span> <span class="nx">done</span> <span class="k">in</span> <span class="nx">fixed</span> <span class="nx">size</span> <span class="nx">blocks</span> <span class="p">(</span><span class="nx">suprise</span><span class="o">!</span><span class="p">).</span>
+</span></span><span class="line"><span class="cl"><span class="nx">For</span> <span class="nx">example</span><span class="p">,</span> <span class="k">in</span> <span class="nx">the</span> <span class="nx">previous</span> <span class="nx">paragraphs</span> <span class="nx">we</span> <span class="nx">discussed</span> <span class="nx">breaking</span> <span class="nx">text</span> <span class="nx">and</span> <span class="nx">keys</span>
+</span></span><span class="line"><span class="cl"><span class="nx">into</span> <span class="mi">256</span> <span class="kr">byte</span> <span class="nx">blocks</span><span class="p">,</span> <span class="nx">and</span> <span class="nx">working</span> <span class="nx">on</span> <span class="nx">those</span> <span class="nx">blocks</span><span class="p">.</span>  <span class="nx">Block</span> <span class="nx">ciphers</span> <span class="nx">use</span> <span class="nx">a</span>
+</span></span><span class="line"><span class="cl"><span class="nx">fixed</span> <span class="nx">key</span> <span class="nx">to</span> <span class="nx">perform</span> <span class="nx">substituion</span> <span class="nx">and</span> <span class="nx">transposition</span> <span class="nx">ciphers</span> <span class="nx">on</span> <span class="nx">each</span>
+</span></span><span class="line"><span class="cl"><span class="nx">block</span> <span class="nx">discretely</span><span class="p">.</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">Its</span> <span class="nx">time</span> <span class="nx">to</span> <span class="nx">employ</span> <span class="nx">a</span> <span class="nx">stream</span> <span class="nx">cipher</span><span class="p">.</span>  <span class="nx">A</span> <span class="nx">stream</span> <span class="nx">cipher</span> <span class="nx">attempts</span> <span class="nx">to</span> <span class="nx">create</span>
+</span></span><span class="line"><span class="cl"><span class="nx">an</span> <span class="nx">on</span><span class="o">-</span><span class="nx">the</span><span class="o">-</span><span class="nx">fly</span> <span class="s1">&#39;random&#39;</span> <span class="nx">keystream</span> <span class="nx">to</span> <span class="nx">encrypt</span> <span class="nx">the</span> <span class="nx">incoming</span> <span class="nx">plaintext</span> <span class="nx">one</span>
+</span></span><span class="line"><span class="cl"><span class="kr">byte</span> <span class="nx">at</span> <span class="nx">a</span> <span class="nx">time</span><span class="p">.</span>  <span class="nx">Typically</span><span class="p">,</span> <span class="nx">the</span> <span class="s1">&#39;random&#39;</span> <span class="nx">key</span> <span class="kr">byte</span> <span class="nx">is</span> <span class="nx">xor</span><span class="s1">&#39;d with the 
+</span></span></span><span class="line"><span class="cl"><span class="s1">plaintext to produce the ciphertext.  If the random keystream can be
+</span></span></span><span class="line"><span class="cl"><span class="s1">replicated at the recieving end, then a further xor will produce the
+</span></span></span><span class="line"><span class="cl"><span class="s1">plaintext once again.
+</span></span></span><span class="line"><span class="cl"><span class="s1">
+</span></span></span><span class="line"><span class="cl"><span class="s1">From this example forward, we will be working with bytes, not ASCII 
+</span></span></span><span class="line"><span class="cl"><span class="s1">text, so a hex editor/dumper like hexdump is a necessity.  Now is the
+</span></span></span><span class="line"><span class="cl"><span class="s1">right time to start to learn to use tools like cryptool.
+</span></span></span><span class="line"><span class="cl"><span class="s1">
+</span></span></span><span class="line"><span class="cl"><span class="s1">In this example, the keyfile is in your directory, however it is 
+</span></span></span><span class="line"><span class="cl"><span class="s1">not readable by you.  The binary &#39;</span><span class="nx">encrypt6</span><span class="s1">&#39; is also available.
+</span></span></span><span class="line"><span class="cl"><span class="s1">It will read the keyfile and encrypt any message you desire, using
+</span></span></span><span class="line"><span class="cl"><span class="s1">the key AND a &#39;</span><span class="nx">random</span><span class="s1">&#39; number.  You get to perform a &#39;</span><span class="nx">known</span> <span class="nx">ciphertext</span><span class="s1">&#39;
+</span></span></span><span class="line"><span class="cl"><span class="s1">attack by introducing plaintext of your choice.  The challenge here is 
+</span></span></span><span class="line"><span class="cl"><span class="s1">not simple, but the &#39;</span><span class="nx">random</span><span class="s1">&#39; number generator is weak.
+</span></span></span><span class="line"><span class="cl"><span class="s1">
+</span></span></span><span class="line"><span class="cl"><span class="s1">As stated, it is now that we suggest you begin to use public tools, like cryptool,
+</span></span></span><span class="line"><span class="cl"><span class="s1">to help in your analysis.  You will most likely need a hint to get going.
+</span></span></span><span class="line"><span class="cl"><span class="s1">See &#39;</span><span class="nx">HINT1</span><span class="s1">&#39; if you need a kicktstart.
+</span></span></span><span class="line"><span class="cl"><span class="s1">
+</span></span></span><span class="line"><span class="cl"><span class="s1">If you have further difficulty, there is a hint in &#39;</span><span class="nx">HINT2</span><span class="s1">&#39;.
+</span></span></span><span class="line"><span class="cl"><span class="s1">
+</span></span></span><span class="line"><span class="cl"><span class="s1">The password for level 7 (krypton7) is encrypted with &#39;</span><span class="nx">encrypt6</span><span class="err">&#39;</span><span class="p">.</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">Good</span> <span class="nx">Luck</span><span class="o">!</span>
+</span></span></code></pre></div><p>We have now moved from classical ciphers to modern ciphers of symmetric and asymmetric ciphers but for this challenge, we are focusing mostly on the stream cipher symmetric,  a flavor of symmetric cipher.</p>
+<p>Looking at the hints given.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-jsx" data-lang="jsx"><span class="line"><span class="cl"><span class="nx">The</span> <span class="s1">&#39;random&#39;</span> <span class="nx">generator</span> <span class="nx">has</span> <span class="nx">a</span> <span class="nx">limited</span> <span class="nx">number</span> <span class="k">of</span> <span class="nx">bits</span><span class="p">,</span> <span class="nx">and</span> <span class="nx">is</span> <span class="nx">periodic</span><span class="p">.</span>
+</span></span><span class="line"><span class="cl"><span class="nx">Entropy</span> <span class="nx">analysis</span> <span class="nx">and</span> <span class="nx">a</span> <span class="nx">good</span> <span class="nx">look</span> <span class="nx">at</span> <span class="nx">the</span> <span class="nx">bytes</span> <span class="k">in</span> <span class="nx">a</span> <span class="nx">hex</span> <span class="nx">editor</span> <span class="nx">will</span> <span class="nx">help</span><span class="p">.</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">There</span> <span class="nx">is</span> <span class="nx">a</span> <span class="nx">pattern</span><span class="o">!</span>
+</span></span><span class="line"><span class="cl"><span class="mi">8</span> <span class="nx">bit</span> <span class="nx">LFSR</span>
+</span></span></code></pre></div><p>Just like level 2, we shall start first by creating a new temporary folder for our exploration, then copy the krypton file to the temporary folder and create a symbolic link o the keyfile to our temporary directory.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-jsx" data-lang="jsx"><span class="line"><span class="cl"><span class="nx">rypton6</span><span class="err">@</span><span class="nx">krypton</span><span class="o">:</span><span class="err">/krypton/krypton6$ mkdir /tmp/newz</span>
+</span></span><span class="line"><span class="cl"><span class="nx">krypton6</span><span class="err">@</span><span class="nx">krypton</span><span class="o">:</span><span class="err">/krypton/krypton6$ cp krypton7 /tmp/newz</span>
+</span></span><span class="line"><span class="cl"><span class="nx">krypton6</span><span class="err">@</span><span class="nx">krypton</span><span class="o">:</span><span class="err">/krypton/krypton6$ cd /tmp/newz</span>
+</span></span><span class="line"><span class="cl"><span class="nx">krypton6</span><span class="err">@</span><span class="nx">krypton</span><span class="o">:</span><span class="err">/tmp/newz$ ln -s /krypton/krypton6/keyfile.dat </span>
+</span></span></code></pre></div><p>Next I tried to print 50 As using python then encrypt using the binary provided to us and noticed a recurring pattern, where after 30 characters, the pattern starts repeating again as shown below.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-jsx" data-lang="jsx"><span class="line"><span class="cl"><span class="nx">krypton6</span><span class="err">@</span><span class="nx">krypton</span><span class="o">:</span><span class="err">/tmp/newz$ python3 -c &#34;print( &#39;A&#39;*50)&#34; &gt; test.txt</span>
+</span></span><span class="line"><span class="cl"><span class="nx">krypton6</span><span class="err">@</span><span class="nx">krypton</span><span class="o">:</span><span class="err">/tmp/newz$ /krypton/krypton6/encrypt6 test.txt output.txt</span>
+</span></span><span class="line"><span class="cl"><span class="nx">krypton6</span><span class="err">@</span><span class="nx">krypton</span><span class="o">:</span><span class="err">/tmp/newz$ cat output.txt</span>
+</span></span><span class="line"><span class="cl"><span class="nx">EICTDGYIYZKTHNSIRFXYCPFUEOCKRNEICTDGYIYZKTHNSIRFXY</span>
+</span></span></code></pre></div><p>As seen above, after 30 characters, the pattern starts to repeat <code>EICTDGYIYZKTHNSIRFXYCPFUEOCKRN EICTDGYIYZKTHNSIRFXY</code></p>
+<p>We can now try a python script that will fasten the process and be able to get the password for the next level.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-jsx" data-lang="jsx"><span class="line"><span class="cl"><span class="nx">key</span> <span class="o">=</span> <span class="s1">&#39;EICTDGYIYZKTHNSIRFXYCPFUEOCKRN&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">cipher</span> <span class="o">=</span> <span class="s1">&#39;PNUKLYLWRQKGKBE&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">pt</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="nx">i</span> <span class="k">in</span> <span class="nx">range</span><span class="p">(</span><span class="nx">len</span><span class="p">(</span><span class="nx">cipher</span><span class="p">))</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">tmp</span> <span class="o">=</span> <span class="nx">ord</span><span class="p">(</span><span class="nx">cipher</span><span class="p">[</span><span class="nx">i</span><span class="p">])</span> <span class="o">-</span> <span class="nx">ord</span><span class="p">(</span><span class="nx">key</span><span class="p">[</span><span class="nx">i</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="nx">tmp</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="o">:</span> <span class="nx">tmp</span> <span class="o">+=</span> <span class="mi">26</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">tmp</span> <span class="o">+=</span> <span class="nx">ord</span><span class="p">(</span><span class="s1">&#39;A&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">pt</span> <span class="o">+=</span> <span class="nx">chr</span><span class="p">(</span><span class="nx">tmp</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nx">print</span> <span class="p">(</span><span class="nx">pt</span><span class="p">)</span>
+</span></span></code></pre></div><p>Below is a breakdown of the code</p>
+<p>🟦 <code>key</code> and <code>cipher</code>:</p>
+<ul>
+<li><code>key</code> is a 30-character uppercase string (but only the first 15 are used).</li>
+<li><code>cipher</code> is a 15-character encrypted message.</li>
+</ul>
+<p>🟦 <code>pt = ''</code>:</p>
+<ul>
+<li>This initializes the <strong>plaintext result</strong>.</li>
+</ul>
+<hr>
+<p>🔄 The <code>for</code> loop:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">cipher</span><span class="p">)):</span>
+</span></span></code></pre></div><ul>
+<li>Iterates over each character of the <code>cipher</code> (15 characters in total).</li>
+</ul>
+<hr>
+<p>🔤 Decryption Logic:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">tmp</span> <span class="o">=</span> <span class="nb">ord</span><span class="p">(</span><span class="n">cipher</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="o">-</span> <span class="nb">ord</span><span class="p">(</span><span class="n">key</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+</span></span></code></pre></div><ul>
+<li>Converts both the cipher character and the corresponding key character to their ASCII values.</li>
+<li>Subtracts the key letter from the cipher letter.</li>
+</ul>
+<p>This is how the <strong>Vigenère decryption</strong> works:</p>
+<pre tabindex="0"><code>P (cipher) - E (key) = K (plain)
+</code></pre><p>📉 <code>if tmp &lt; 0: tmp += 26</code></p>
+<ul>
+<li>If the result is negative (e.g., &lsquo;A&rsquo; - &lsquo;Z&rsquo;), wrap around the alphabet by adding 26.</li>
+</ul>
+<p>🔁 <code>tmp += ord('A')</code></p>
+<ul>
+<li>Shifts the result back into the <strong>uppercase letter range (ASCII 65–90)</strong>.</li>
+</ul>
+<p>🔠 <code>pt += chr(tmp)</code></p>
+<ul>
+<li>Converts the result back to a character and appends it to the plaintext.</li>
+</ul>
+<hr>
+<p>📤 Final Output:</p>
+<p>Prints the decrypted message.</p>
+<hr>
+<p>🧪 Example Run:</p>
+<p>If you run the code, you&rsquo;ll get the output:</p>
+<pre tabindex="0"><code>KNOWLEDGEISPOWER
+</code></pre><hr>
+<p>After executing the script we get the password as seen below.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-jsx" data-lang="jsx"><span class="line"><span class="cl"><span class="nx">krypton6</span><span class="err">@</span><span class="nx">krypton</span><span class="o">:</span><span class="err">/tmp/newz$ python3 a.py </span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">REDACTED</span><span class="p">]</span>
+</span></span></code></pre></div>
+<h2 class="relative group">Krypton 7
+    <div id="krypton-7" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#krypton-7" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>We have now aided superman overcome his weakness.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-jsx" data-lang="jsx"><span class="line"><span class="cl"><span class="nx">krypton7</span><span class="err">@</span><span class="nx">krypton</span><span class="o">:</span><span class="err">/krypton/krypton7$ ls</span>
+</span></span><span class="line"><span class="cl"><span class="nx">README</span>
+</span></span><span class="line"><span class="cl"><span class="nx">krypton7</span><span class="err">@</span><span class="nx">krypton</span><span class="o">:</span><span class="err">/krypton/krypton7$ cat README </span>
+</span></span><span class="line"><span class="cl"><span class="nx">Congratulations</span> <span class="nx">on</span> <span class="nx">beating</span> <span class="nx">Krypton</span><span class="o">!</span>
+</span></span><span class="line"><span class="cl"><span class="nx">krypton7</span><span class="err">@</span><span class="nx">krypton</span><span class="o">:</span><span class="err">/krypton/krypton7$ </span>
+</span></span></code></pre></div><p>TILL we meet again 😊.</p>
+
+          
+          
+          
+        </div>
+        
+        
+
+        
+
+        
+  
+  
+    <h2 class="mt-8 text-2xl font-extrabold mb-10">Related</h2>
+    <section class="w-full grid gap-4 sm:grid-cols-2 md:grid-cols-3">
+      
+        
+
+
+
+
+
+
+
+  
+
+  
+  
+    
+    
+      
+    
+      
+    
+      
+    
+  
+
+  
+  
+
+  
+  
+    
+      
+      
+        
+      
+    
+  
+
+
+
+<article
+  class="relative min-h-full min-w-full overflow-hidden rounded border border-2 border-neutral-200 shadow-2xl dark:border-neutral-700">
+  
+    <div class="flex-none relative overflow-hidden thumbnail_card_related">
+      <img
+        src="/posts/leviathan/featured_hu_c8874f5b6cac2001.png"
+        alt="overthewire leviathan war games"
+        loading="lazy"
+        decoding="async"
+        fetchpriority="low"
+        class="not-prose absolute inset-0 w-full h-full object-cover">
+    </div>
+  
+  
+  <div class="px-6 py-4">
+    <header>
+      <a
+        
+          href="/posts/leviathan/"
+        
+        class="not-prose before:absolute before:inset-0 decoration-primary-500 dark:text-neutral text-xl font-bold text-neutral-800 hover:underline hover:underline-offset-2">
+        <h2>
+          overthewire leviathan war games
+          
+        </h2>
+      </a>
+    </header>
+    <div class="text-sm text-neutral-500 dark:text-neutral-400">
+      
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2025-07-26T00:00:00&#43;00:00">26 July 2025</time><span class="px-2 text-primary-500">&middot;</span><span>2593 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">13 mins</span>
+    
+
+    
+    
+  </div>
+
+  
+    <div class="flex flex-row flex-wrap items-center">
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+  
+
+  
+  
+    <div class="flex flex-row flex-wrap items-center">
+      
+        
+      
+        
+          
+            
+              <a class="relative mt-[0.5rem] me-2" href="/categories/overthewire/">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Overthewire
+  </span>
+</span>
+
+              </a>
+            
+          
+        
+      
+        
+      
+        
+          
+            
+              <a class="relative mt-[0.5rem] me-2" href="/tags/leviathan/">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Leviathan
+  </span>
+</span>
+
+              </a>
+            
+              <a class="relative mt-[0.5rem] me-2" href="/tags/linux/">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Linux
+  </span>
+</span>
+
+              </a>
+            
+              <a class="relative mt-[0.5rem] me-2" href="/tags/binary-exploitation/">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Binary Exploitation
+  </span>
+</span>
+
+              </a>
+            
+          
+        
+      
+    </div>
+  
+
+  
+  
+
+
+
+    </div>
+    
+      <div class="prose dark:prose-invert py-1">overthewire wargames leviathan series</div>
+    
+  </div>
+  <div class="px-6 pt-4 pb-2"></div>
+</article>
+
+      
+        
+
+
+
+
+
+
+
+  
+
+  
+  
+    
+    
+      
+    
+      
+    
+      
+    
+  
+
+  
+  
+
+  
+  
+    
+      
+      
+        
+      
+    
+  
+
+
+
+<article
+  class="relative min-h-full min-w-full overflow-hidden rounded border border-2 border-neutral-200 shadow-2xl dark:border-neutral-700">
+  
+    <div class="flex-none relative overflow-hidden thumbnail_card_related">
+      <img
+        src="/posts/bandit/featured_hu_c8874f5b6cac2001.png"
+        alt="overthewire bandit war games"
+        loading="lazy"
+        decoding="async"
+        fetchpriority="low"
+        class="not-prose absolute inset-0 w-full h-full object-cover">
+    </div>
+  
+  
+  <div class="px-6 py-4">
+    <header>
+      <a
+        
+          href="/posts/bandit/"
+        
+        class="not-prose before:absolute before:inset-0 decoration-primary-500 dark:text-neutral text-xl font-bold text-neutral-800 hover:underline hover:underline-offset-2">
+        <h2>
+          overthewire bandit war games
+          
+        </h2>
+      </a>
+    </header>
+    <div class="text-sm text-neutral-500 dark:text-neutral-400">
+      
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2025-06-04T00:00:00&#43;00:00">4 June 2025</time><span class="px-2 text-primary-500">&middot;</span><span>8187 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">39 mins</span>
+    
+
+    
+    
+  </div>
+
+  
+    <div class="flex flex-row flex-wrap items-center">
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+  
+
+  
+  
+    <div class="flex flex-row flex-wrap items-center">
+      
+        
+      
+        
+          
+            
+              <a class="relative mt-[0.5rem] me-2" href="/categories/overthewire/">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Overthewire
+  </span>
+</span>
+
+              </a>
+            
+          
+        
+      
+        
+      
+        
+          
+            
+              <a class="relative mt-[0.5rem] me-2" href="/tags/bandit/">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Bandit
+  </span>
+</span>
+
+              </a>
+            
+              <a class="relative mt-[0.5rem] me-2" href="/tags/git/">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Git
+  </span>
+</span>
+
+              </a>
+            
+              <a class="relative mt-[0.5rem] me-2" href="/tags/linux/">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Linux
+  </span>
+</span>
+
+              </a>
+            
+              <a class="relative mt-[0.5rem] me-2" href="/tags/ssh/">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    SSH
+  </span>
+</span>
+
+              </a>
+            
+          
+        
+      
+    </div>
+  
+
+  
+  
+
+
+
+    </div>
+    
+      <div class="prose dark:prose-invert py-1">overthewire wargames bandit series</div>
+    
+  </div>
+  <div class="px-6 pt-4 pb-2"></div>
+</article>
+
+      
+        
+
+
+
+
+
+
+
+  
+
+  
+  
+    
+    
+      
+    
+      
+    
+      
+    
+  
+
+  
+  
+
+  
+  
+    
+      
+      
+        
+      
+    
+  
+
+
+
+<article
+  class="relative min-h-full min-w-full overflow-hidden rounded border border-2 border-neutral-200 shadow-2xl dark:border-neutral-700">
+  
+    <div class="flex-none relative overflow-hidden thumbnail_card_related">
+      <img
+        src="/posts/groot/featured_hu_3b1dd5cbbc3ec098.png"
+        alt="Underthewire groot war games"
+        loading="lazy"
+        decoding="async"
+        fetchpriority="low"
+        class="not-prose absolute inset-0 w-full h-full object-cover">
+    </div>
+  
+  
+  <div class="px-6 py-4">
+    <header>
+      <a
+        
+          href="/posts/groot/"
+        
+        class="not-prose before:absolute before:inset-0 decoration-primary-500 dark:text-neutral text-xl font-bold text-neutral-800 hover:underline hover:underline-offset-2">
+        <h2>
+          Underthewire groot war games
+          
+        </h2>
+      </a>
+    </header>
+    <div class="text-sm text-neutral-500 dark:text-neutral-400">
+      
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2025-06-11T00:00:00&#43;00:00">11 June 2025</time><span class="px-2 text-primary-500">&middot;</span><span>4022 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">19 mins</span>
+    
+
+    
+    
+  </div>
+
+  
+    <div class="flex flex-row flex-wrap items-center">
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+  
+
+  
+  
+    <div class="flex flex-row flex-wrap items-center">
+      
+        
+      
+        
+          
+            
+              <a class="relative mt-[0.5rem] me-2" href="/categories/underthewire/">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Underthewire
+  </span>
+</span>
+
+              </a>
+            
+              <a class="relative mt-[0.5rem] me-2" href="/categories/ad/">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    AD
+  </span>
+</span>
+
+              </a>
+            
+          
+        
+      
+        
+      
+        
+          
+            
+              <a class="relative mt-[0.5rem] me-2" href="/tags/powershell/">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Powershell
+  </span>
+</span>
+
+              </a>
+            
+              <a class="relative mt-[0.5rem] me-2" href="/tags/ssh/">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    SSH
+  </span>
+</span>
+
+              </a>
+            
+          
+        
+      
+    </div>
+  
+
+  
+  
+
+
+
+    </div>
+    
+      <div class="prose dark:prose-invert py-1">underthewire wargames groot series</div>
+    
+  </div>
+  <div class="px-6 pt-4 pb-2"></div>
+</article>
+
+      
+    </section>
+  
+
+
+      </div>
+
+      
+      
+        
+        
+          
+          
+        
+        
+        
+        <script
+          type="text/javascript"
+          src="/js/page.min.54b6f4371722649edbe871e431d8670d670878c22be8f36e229fe53cc9b786fe25a834def5e6de621f7a3e37b72bc8cd73839aa5ed907ed6cbd45cd3e1b0fa20.js"
+          integrity="sha512-VLb0NxciZJ7b6HHkMdhnDWcIeMIr6PNuIp/lPMm3hv4lqDTe9ebeYh96Pje3K8jNc4Oape2QftbL1FzT4bD6IA=="
+          data-oid="views_posts\Krypton\index.md"
+          data-oid-likes="likes_posts\Krypton\index.md"></script>
+      
+    </section>
+
+    
+    <footer class="pt-8 max-w-prose print:hidden">
+      
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600">
+      <div class="flex justify-between pt-3">
+        <span class="flex flex-col">
+          
+            <a
+              class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/posts/leviathan/">
+              <span class="leading-6">
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;overthewire leviathan war games
+              </span>
+            </a>
+            
+              <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="2025-07-26T00:00:00&#43;00:00">26 July 2025</time>
+              </span>
+            
+          
+        </span>
+        <span class="flex flex-col items-end">
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+      
+    </footer>
+  </article>
+
+        
+
+
+  
+
+
+
+
+
+
+<div
+  id="scroll-to-top"
+  class="fixed bottom-6 end-6 z-50 transform translate-y-4 opacity-0 duration-200">
+  <a
+    href="#the-top"
+    class="pointer-events-auto flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+    aria-label="Scroll to top"
+    title="Scroll to top">
+    &uarr;
+  </a>
+</div>
+
+      </main><footer id="site-footer" class="py-10 print:hidden">
+  
+  
+    
+      
+      
+        
+          
+          
+      
+      
+      
+      <nav class="flex flex-row pb-4 text-base font-medium text-neutral-500 dark:text-neutral-400 ">
+        <ul class="flex list-none flex-col sm:flex-row">
+          
+            <li class=" flex mb-1 text-end sm:mb-0 sm:me-7 sm:last:me-0 ">
+              <a
+                class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2 flex items-center"
+                href="/tags/"
+                title="Tags">
+                
+                Tags
+              </a>
+            </li>
+          
+            <li class=" flex mb-1 text-end sm:mb-0 sm:me-7 sm:last:me-0 ">
+              <a
+                class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2 flex items-center"
+                href="/categories/"
+                title="Categories">
+                
+                Categories
+              </a>
+            </li>
+          
+        </ul>
+      </nav>
+    
+  
+  <div class="flex items-center justify-between">
+    
+    
+      <p class="text-sm text-neutral-500 dark:text-neutral-400">
+          © 2025 𝓱𝐚ĆⓀ𝑒я | All rights reserved.
+      </p>
+    
+
+    
+    
+  </div>
+  
+    <script>
+      mediumZoom(document.querySelectorAll("img:not(.nozoom)"), {
+        margin: 24,
+        background: "rgba(0,0,0,0.5)",
+        scrollOffset: 0,
+      });
+    </script>
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/process.min.ee03488f19c93c2efb199e2e3014ea5f3cb2ce7d45154adb3399a158cac27ca52831db249ede5bb602700ef87eb02434139de0858af1818ab0fb4182472204a4.js"
+    integrity="sha512-7gNIjxnJPC77GZ4uMBTqXzyyzn1FFUrbM5mhWMrCfKUoMdsknt5btgJwDvh&#43;sCQ0E53ghYrxgYqw&#43;0GCRyIEpA=="></script>
+  
+  
+</footer>
+<div
+  id="search-wrapper"
+  class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh] z-500"
+  data-url="http://localhost:1313/">
+  <div
+    id="search-modal"
+    class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800">
+    <header class="relative z-10 flex items-center justify-between flex-none px-2">
+      <form class="flex items-center flex-auto min-w-0">
+        <div class="flex items-center justify-center w-8 h-8 text-neutral-400">
+          <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          class="flex flex-auto h-12 mx-1 bg-transparent appearance-none focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="Search"
+          tabindex="0">
+      </form>
+      <button
+        id="close-search-button"
+        class="flex items-center justify-center w-8 h-8 text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="Close (Esc)">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </button>
+    </header>
+    <section class="flex-auto px-2 overflow-auto">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
+
+    </div>
+  </body>
+  
+</html>

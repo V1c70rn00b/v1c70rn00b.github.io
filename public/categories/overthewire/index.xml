@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Overthewire on v1c70r_n00b&#39;$ Blog ⚔︎⛊</title>
+    <link>http://localhost:1313/categories/overthewire/</link>
+    <description>Recent content in Overthewire on v1c70r_n00b&#39;$ Blog ⚔︎⛊</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>mwaivictor04@gmail.com (V1c70r_n00b)</managingEditor>
+    <webMaster>mwaivictor04@gmail.com (V1c70r_n00b)</webMaster>
+    <copyright>&amp;copy; 2025 𝓱𝐚ĆⓀ𝑒я | All rights reserved.</copyright>
+    <lastBuildDate>Sat, 26 Jul 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/categories/overthewire/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>overthewire krypton war games</title>
+      <link>http://localhost:1313/posts/krypton/</link>
+      <pubDate>Sat, 26 Jul 2025 00:00:00 +0000</pubDate>
+      <author>mwaivictor04@gmail.com (V1c70r_n00b)</author>
+      <guid>http://localhost:1313/posts/krypton/</guid>
+      <description>overthewire wargames krypton series</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/krypton/featured.png" />
+    </item>
+    
+    <item>
+      <title>overthewire leviathan war games</title>
+      <link>http://localhost:1313/posts/leviathan/</link>
+      <pubDate>Sat, 26 Jul 2025 00:00:00 +0000</pubDate>
+      <author>mwaivictor04@gmail.com (V1c70r_n00b)</author>
+      <guid>http://localhost:1313/posts/leviathan/</guid>
+      <description>overthewire wargames leviathan series</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/leviathan/featured.png" />
+    </item>
+    
+    <item>
+      <title>overthewire bandit war games</title>
+      <link>http://localhost:1313/posts/bandit/</link>
+      <pubDate>Wed, 04 Jun 2025 00:00:00 +0000</pubDate>
+      <author>mwaivictor04@gmail.com (V1c70r_n00b)</author>
+      <guid>http://localhost:1313/posts/bandit/</guid>
+      <description>overthewire wargames bandit series</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/bandit/featured.png" />
+    </item>
+    
+  </channel>
+</rss>

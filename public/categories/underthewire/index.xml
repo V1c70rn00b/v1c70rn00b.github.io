@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Underthewire on v1c70r_n00b&#39;$ Blog ⚔︎⛊</title>
+    <link>http://localhost:1313/categories/underthewire/</link>
+    <description>Recent content in Underthewire on v1c70r_n00b&#39;$ Blog ⚔︎⛊</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>mwaivictor04@gmail.com (V1c70r_n00b)</managingEditor>
+    <webMaster>mwaivictor04@gmail.com (V1c70r_n00b)</webMaster>
+    <copyright>&amp;copy; 2025 𝓱𝐚ĆⓀ𝑒я | All rights reserved.</copyright>
+    <lastBuildDate>Wed, 11 Jun 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/categories/underthewire/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Underthewire groot war games</title>
+      <link>http://localhost:1313/posts/groot/</link>
+      <pubDate>Wed, 11 Jun 2025 00:00:00 +0000</pubDate>
+      <author>mwaivictor04@gmail.com (V1c70r_n00b)</author>
+      <guid>http://localhost:1313/posts/groot/</guid>
+      <description>underthewire wargames groot series</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/groot/featured.png" />
+    </item>
+    
+    <item>
+      <title>Underthewire oracle war games</title>
+      <link>http://localhost:1313/posts/oracle/</link>
+      <pubDate>Wed, 11 Jun 2025 00:00:00 +0000</pubDate>
+      <author>mwaivictor04@gmail.com (V1c70r_n00b)</author>
+      <guid>http://localhost:1313/posts/oracle/</guid>
+      <description>underthewire wargames oracle series</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/oracle/featured.png" />
+    </item>
+    
+    <item>
+      <title>Underthewire trebek war games</title>
+      <link>http://localhost:1313/posts/trebek/</link>
+      <pubDate>Wed, 11 Jun 2025 00:00:00 +0000</pubDate>
+      <author>mwaivictor04@gmail.com (V1c70r_n00b)</author>
+      <guid>http://localhost:1313/posts/trebek/</guid>
+      <description>underthewire wargames trebek series</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/trebek/featured.png" />
+    </item>
+    
+    <item>
+      <title>Underthewire century war games</title>
+      <link>http://localhost:1313/posts/century/</link>
+      <pubDate>Tue, 10 Jun 2025 00:00:00 +0000</pubDate>
+      <author>mwaivictor04@gmail.com (V1c70r_n00b)</author>
+      <guid>http://localhost:1313/posts/century/</guid>
+      <description>underthewire wargames century series</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/century/featured.png" />
+    </item>
+    
+    <item>
+      <title>Underthewire cyborg war games</title>
+      <link>http://localhost:1313/posts/cyborg/</link>
+      <pubDate>Tue, 10 Jun 2025 00:00:00 +0000</pubDate>
+      <author>mwaivictor04@gmail.com (V1c70r_n00b)</author>
+      <guid>http://localhost:1313/posts/cyborg/</guid>
+      <description>underthewire wargames cyborg series</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/cyborg/featured.png" />
+    </item>
+    
+  </channel>
+</rss>
