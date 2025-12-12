@@ -107,16 +107,3 @@ OSINT labs writeups
 <iframe src="https://tryhackme.com/api/v2/badges/public-profile?userPublicId=1353127" style='border:none;'></iframe> 
  
 
-## ~/Areas of interest
-
-  * [x] `Red team`
-  * [x] `Web Application Security`
-  * [x] `Digital Forensics`
-  * [x] `Open Source Intelligence`
-  * [x] `Cloud`
-  * [x] `Networking`
-  * [x] `Security Operations Centre`
-  
-
-
-
