@@ -59,7 +59,7 @@ Wireless Pentest labs
  
  {{<timeline>}}
 
- {{< timelineItem icon="briefcase" header="Junior Penetration Tester" badge="July 2024 – August 2024" subheader="Hacktify Cybersecurity, Remote" >}}
+ {{< timelineItem header="Junior Penetration Tester" badge="July 2024 – August 2024" subheader="Hacktify Cybersecurity, Remote" >}}
  During the internship I was tasked with the following tasks;
 
 - Penetration Testing: Conducted assessments on vulnerable websites and documented findings in detailed reports.
