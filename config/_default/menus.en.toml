@@ -97,5 +97,5 @@
 
  [[footer]]
    name = "Check time"
-   pageRef = "/public/time.html"
+   url = "/time.html"
    weight = 10
