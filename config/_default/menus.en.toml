@@ -88,9 +88,14 @@
  [[footer]]
    name = "Tags"
    pageRef = "tags"
-   weight = 10
+   weight = 20
 
  [[footer]]
    name = "Categories"
    pageRef = "categories"
-   weight = 20
+   weight = 30
+
+ [[footer]]
+   name = "Check time"
+   pageRef = "/public/time.html"
+   weight = 10
