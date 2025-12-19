@@ -96,6 +96,6 @@
    weight = 30
 
  [[footer]]
-   name = "Check time"
+   name = "It's that time"
    url = "/time.html"
    weight = 10
