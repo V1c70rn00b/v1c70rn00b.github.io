@@ -104,8 +104,8 @@ OSINT labs writeups
 
 
 
-- [ ![V1c70rn00b](https://www.hackthebox.com/badge/image/1231357)](https://app.hackthebox.com/public/users/1231357)
-- <iframe src="https://tryhackme.com/api/v2/badges/public-profile?userPublicId=1353127" style='border:none;'></iframe> 
+ [ ![V1c70rn00b](https://www.hackthebox.com/badge/image/1231357)](https://app.hackthebox.com/public/users/1231357)
+ <iframe src="https://tryhackme.com/api/v2/badges/public-profile?userPublicId=1353127" style='border:none;'></iframe> 
 
  
 
