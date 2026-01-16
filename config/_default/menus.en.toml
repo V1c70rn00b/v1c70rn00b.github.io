@@ -97,5 +97,5 @@
 
  [[footer]]
    name = "It's that time"
-   url = "/layouts/partials/time.html"
+   url = "/time/"
    weight = 10
