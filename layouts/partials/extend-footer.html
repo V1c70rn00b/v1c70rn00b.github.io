@@ -1,285 +1,175 @@
-{{/* Interactive Terminal and CRT Toggle Implementation - Fixed Build v5 (JSON Injection) */}}
-
-<!-- CRT Toggle Button -->
-<button id="crt-toggle-btn" title="Toggle Retro Mode">
-    [ CRT: <span id="crt-status-text">OFF</span> ]
-</button>
-
-<!-- Terminal Overlay -->
-<div id="term-overlay">
-    <div class="term-window">
-        <div class="term-header">
-            <span>root@7r00t.github.io:~</span>
-            <span class="term-close-btn" style="cursor:pointer">[X]</span>
-        </div>
-        <div class="term-output" id="term-output">
-            <div class="term-banner">
-                <pre>
-   _____                __ 
-  |___  |              /  |
-      | |_ __ ___   __ | _|
-      | | '__/ _ \ / _\| | 
-  /___| | | | (_) | (_) | | 
-  \_____|_|  \___/ \___/|_| 
-                       
-  Welcome to 7r00t OS v1.0.0
-  Type <span class="term-help-cmd">'help'</span> for available commands.
-        </pre>
-            </div>
-            <div>&nbsp;</div>
-        </div>
-        <div class="term-input-line">
-            <span class="term-prompt">root@7r00t:~$</span>
-            <input type="text" id="term-input" autocomplete="off" spellcheck="false" autofocus>
-        </div>
-    </div>
-</div>
-
-<!-- Hugo Data Injection: Separated from JS to prevent formatter issues -->
-<script id="d-posts" type="application/json">
-[
-    {{ $posts := where site.RegularPages "Type" "posts" }}
-    {{ range $index, $e := first 5 $posts }}
-    {{ if $index }},{{ end }}
-    {
-        "title": "{{ .Title }}",
-        "url": "{{ .Permalink }}",
-        "date": "{{ .Date.Format "2006-01-02" }}" 
-    }
-    {{ end }}
-]
-</script>
-
-<script>
-    (function () {
-        /* --- CRT Mode Logic --- */
-        const crtBtn = document.getElementById('crt-toggle-btn');
-        const crtStatus = document.getElementById('crt-status-text');
-        const html = document.documentElement;
-
-        // Load saved preference
-        if (localStorage.getItem('crtMode') === 'enabled') {
-            html.classList.add('crt-active');
-            crtStatus.textContent = 'ON';
-        }
-
-        crtBtn.addEventListener('click', () => {
-            html.classList.toggle('crt-active');
-            const isActive = html.classList.contains('crt-active');
-            crtStatus.textContent = isActive ? 'ON' : 'OFF';
-            localStorage.setItem('crtMode', isActive ? 'enabled' : 'disabled');
-        });
-
-        /* --- Terminal Logic --- */
-        const termOverlay = document.getElementById('term-overlay');
-        const termInput = document.getElementById('term-input');
-        const termOutput = document.getElementById('term-output');
-        const closeBtn = document.querySelector('.term-close-btn');
-
-        // Toggle Terminal on Keypress (Ctrl + `)
-        document.addEventListener('keydown', (e) => {
-            if (e.ctrlKey && e.key === '`') {
-                toggleTerminal();
-            }
-        });
-
-        closeBtn.addEventListener('click', toggleTerminal);
-
-        // Close when clicking outside logic could be added here if desired
-
-        function toggleTerminal() {
-            termOverlay.classList.toggle('active');
-            if (termOverlay.classList.contains('active')) {
-                termInput.focus();
-            }
-        }
-
-        // Load Recent Posts Data from JSON script block
-        let recentPosts = [];
-        try {
-            const dataEl = document.getElementById('d-posts');
-            if (dataEl) {
-                recentPosts = JSON.parse(dataEl.textContent);
-            }
-        } catch (e) {
-            console.error("Error parsing posts data:", e);
-        }
-
-        /* --- Command Processing --- */
-        termInput.addEventListener('keydown', (e) => {
-            if (e.key === 'Enter') {
-                const cmd = termInput.value.trim();
-                if (cmd) {
-                    printLine(`root@7r00t:~$ ${cmd}`);
-                    processCommand(cmd);
-                    termInput.value = '';
-                }
-            }
-        });
-
-        function printLine(text, className = '') {
-            const div = document.createElement('div');
-            div.innerHTML = text; // Allow HTML
-            if (className) div.classList.add(className);
-            termOutput.appendChild(div);
-            termOutput.scrollTop = termOutput.scrollHeight;
-        }
-
-        function processCommand(rawCmd) {
-            const args = rawCmd.split(' ');
-            const cmd = args[0].toLowerCase();
-
-            switch (cmd) {
-                case 'help':
-                    printLine(`
-Available commands:
-  <span class="term-help-cmd">help</span>    - Show this help message
-  <span class="term-help-cmd">ls</span>      - List recent writeups
-  <span class="term-help-cmd">whoami</span>  - Print current user info
-  <span class="term-help-cmd">open</span>    - Open a post (usage: open &lt;index&gt;)
-  <span class="term-help-cmd">clear</span>   - Clear terminal output
-  <span class="term-help-cmd">cat</span>     - Read about info (usage: cat about)
-  <span class="term-help-cmd">exit</span>    - Close terminal
-        `);
-                    break;
-
-                case 'ls':
-                    let output = '<div style="display:grid; grid-template-columns: auto 1fr; gap: 10px;">';
-                    recentPosts.forEach((post, index) => {
-                        output += `<span>[${index + 1}]</span> <a href="${post.url}" class="term-info" style="text-decoration:none">${post.title}</a>`;
-                    });
-                    output += '</div>';
-                    printLine(output);
-                    break;
-
-                case 'open':
-                    const index = parseInt(args[1]) - 1;
-                    if (index >= 0 && index < recentPosts.length) {
-                        printLine(`Opening ${recentPosts[index].title}...`, 'term-success');
-                        setTimeout(() => {
-                            window.location.href = recentPosts[index].url;
-                        }, 800);
-                    } else {
-                        printLine('Error: Invalid post index. Use "ls" to see numbers.', 'term-error');
-                    }
-                    break;
-
-                case 'whoami':
-                    printLine('guest@7r00t.github.io (Level 1 Visitor)');
-                    break;
-
-                case 'cat':
-                    if (args[1] === 'about') {
-                        printLine('Security Researcher | CTF Player | Blogger');
-                        printLine('Passionate about dissecting malware and solving complex puzzles.');
-                    } else {
-                        printLine(`cat: ${args[1]}: No such file or directory`, 'term-error');
-                    }
-                    break;
-
-                case 'clear':
-                    termOutput.innerHTML = '';
-                    break;
-
-                case 'exit':
-                    toggleTerminal();
-                    break;
-
-                case 'sudo':
-                    printLine('uid=0(root) gid=0(root) groups=0(root)', 'term-success');
-                    printLine('Just kidding. You have no power here.', 'term-info');
-                    break;
-
-                default:
-                    printLine(`Command not found: ${cmd}. Type 'help' for available commands.`, 'term-error');
-            }
-        }
-    })();
-</script>
-
+<!DOCTYPE html>
 <!-- System Status Footer -->
 <div id="status-footer">
+    <canvas id="footer-particles"></canvas>
     <div class="status-left">
         <span class="status-item">[STATUS: <span style="color: #00ff41;">ONLINE</span>]</span>
-        <span class="status-item">[UPTIME: <span id="uptime-counter">1 years</span>]</span>
+        <span class="status-item">[UPTIME: <span id="uptime-counter">calculating...</span>]</span>
         <span class="status-item mobile-hide">[MODE: <span id="mode-text" style="color: #00ff41;">STEALTH</span>]</span>
+        <span class="status-item mobile-hide">[TIME: <span id="current-time" style="color: #00d4ff;">00:00:00</span>]</span>
     </div>
 </div>
 
-<style>
-    #status-footer {
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 30px;
-        background: #0d1117;
-        border-top: 1px solid #30363d;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 0 1rem;
-        z-index: 9999;
-        font-family: 'Courier New', Courier, monospace;
-        font-size: 0.8rem;
-        color: #8b949e;
-    }
-
-    .status-left {
-        display: flex;
-        gap: 1.5rem;
-        white-space: nowrap;
-        background: #0d1117;
-        z-index: 2;
-        padding-right: 1rem;
-    }
-
-    .status-item {
-        font-weight: bold;
-    }
-
-    @media (max-width: 600px) {
-        .mobile-hide {
-            display: none;
-        }
-
-        /* Hide matrix scroll on mobile to save space */
-    }
-
-    /* Adjust page margin to not hide behind footer */
-    body {
-        margin-bottom: 30px;
-    }
-</style>
-
 <script>
-    // Uptime Counter Simulation
-    const startDate = new Date("2024-01-01").getTime();
+(function () {
+    const c = document.getElementById('footer-particles');
+    const ctx = c.getContext('2d');
+    let w, h;
+    const particles = [];
+
+    function resize() {
+        w = c.width = c.parentElement.offsetWidth;
+        h = c.height = c.parentElement.offsetHeight;
+    }
+    window.addEventListener('resize', resize);
+    resize();
+
+    class Packet {
+        constructor() { this.reset(); }
+        reset() {
+            this.x = Math.random() * w;
+            this.y = Math.random() * h;
+            this.speed = Math.random() * 2 + 1;
+            this.size = Math.random() * 2 + 1;
+            this.len = Math.random() * 20 + 5;
+            this.alpha = Math.random() * 0.5 + 0.1;
+            this.isBinary = Math.random() > 0.8;
+        }
+        update() {
+            this.x += this.speed;
+            if (this.x > w + this.len) this.x = -this.len;
+        }
+        draw() {
+            ctx.fillStyle = `rgba(0, 255, 65, ${this.alpha})`;
+            if (this.isBinary) {
+                ctx.font = '10px monospace';
+                ctx.fillText(Math.random() > 0.5 ? '1' : '0', this.x, this.y);
+            } else {
+                ctx.fillRect(this.x, this.y, this.len, this.size);
+            }
+        }
+    }
+
+    for (let i = 0; i < 40; i++) particles.push(new Packet());
+
+    function loop() {
+        ctx.fillStyle = 'rgba(13, 17, 23, 0.2)';
+        ctx.fillRect(0, 0, w, h);
+        particles.forEach(p => { p.update(); p.draw(); });
+        requestAnimationFrame(loop);
+    }
+    loop();
 
     function updateUptime() {
-        const now = new Date().getTime();
-        const diff = now - startDate;
+        // ⚠️ CHANGE THIS TO YOUR BLOG'S LAUNCH DATE!
+        const launchDate = new Date('2024-01-24T00:00:00');
+        const now = new Date();
+        const diff = now - launchDate;
 
-        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-        const years = (days / 365).toFixed(1);
+        const totalSeconds = Math.floor(diff / 1000);
+        const totalDays = Math.floor(totalSeconds / (60 * 60 * 24));
+        const hours = Math.floor((totalSeconds % (60 * 60 * 24)) / (60 * 60));
+        const minutes = Math.floor((totalSeconds % (60 * 60)) / 60);
+        const seconds = totalSeconds % 60;
 
-        const counter = document.getElementById('uptime-counter');
-        if (counter) {
-            counter.innerText = `${years} years`;
+        const years = Math.floor(totalDays / 365);
+        const remainingDaysAfterYears = totalDays % 365;
+        const months = Math.floor(remainingDaysAfterYears / 30);
+        const days = remainingDaysAfterYears % 30;
+
+        let uptimeText;
+        if (years > 0) {
+            uptimeText = `${years}y ${months}mo ${days}d ${hours}h ${minutes}m ${seconds}s`;
+        } else if (months > 0) {
+            uptimeText = `${months}mo ${days}d ${hours}h ${minutes}m ${seconds}s`;
+        } else {
+            uptimeText = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+        }
+
+        const uptimeElem = document.getElementById('uptime-counter');
+        if (uptimeElem) {
+            uptimeElem.textContent = uptimeText;
         }
     }
 
+    setInterval(updateUptime, 1000);
     updateUptime();
 
-    // Dynamic Mode Cycling
-    const modes = ["STEALTH", "HUNTING", "RECON", "SECURE", "ROOT", "GHOST"];
-    let modeIndex = 0;
-    const modeElement = document.getElementById('mode-text');
-
-    if (modeElement) {
-        setInterval(() => {
-            modeIndex = (modeIndex + 1) % modes.length;
-            modeElement.innerText = modes[modeIndex];
-        }, 3000); // Change every 3 seconds
+    function updateClock() {
+        const now = new Date();
+        const hours = String(now.getHours()).padStart(2, '0');
+        const minutes = String(now.getMinutes()).padStart(2, '0');
+        const seconds = String(now.getSeconds()).padStart(2, '0');
+        const timeString = `${hours}:${minutes}:${seconds}`;
+        const clockElem = document.getElementById('current-time');
+        if (clockElem) {
+            clockElem.textContent = timeString;
+        }
     }
+    setInterval(updateClock, 1000);
+    updateClock();
+
+})();
 </script>
+
+<style>
+#status-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30px;
+    background: #0d1117;
+    border-top: 1px solid #30363d;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 1rem;
+    z-index: 9999;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.8rem;
+    color: #8b949e;
+    overflow: hidden;
+}
+
+#footer-particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 30px;
+    z-index: 0;
+    pointer-events: none;
+    opacity: 0.6;
+}
+
+.status-left {
+    display: flex;
+    gap: 1.5rem;
+    white-space: nowrap;
+    position: relative;
+    z-index: 2;
+    padding: 5px 1rem;
+    align-items: center;
+}
+
+.status-item {
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .mobile-hide {
+        display: none;
+    }
+    
+    .status-left {
+        gap: 1rem;
+        font-size: 0.7rem;
+    }
+}
+
+body {
+    padding-bottom: 35px;
+}
+</style>
+</html>
