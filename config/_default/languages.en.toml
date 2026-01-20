@@ -19,11 +19,7 @@ title = "v1c70r_n00b'$ Blog ⚔︎⛊"
    email = "mwaivictor04@gmail.com"
    image = "profile.png"
    imageQuality = 96
-   headline = """What if changing the world was just about being here? By showing up no matter how many times we get told we don’t belong? By staying true even when we are shamed into being false? By believing in ourselves even when we are too different? And if we all held on to that, if we refuse to budge and fall in line. if we stood our ground for long enough, just maybe the world can’t help but change around us
- 
-~ Elliot Alderson~
-
-"""
+   headline = "The IT guy"
    bio = "Isaiah 6:8"
    links = [
 #     { email = "mailto:v1c70r.n00b@gmail.com" },
