@@ -12,17 +12,17 @@ title = "v1c70r_n00b'$ Blog ⚔︎⛊"
   # logo = "img/logo.png"
   # secondaryLogo = "img/secondary-logo.png"
    description = "Welcome to the land of geeks"
-   copyright = "&copy; 2025-2026 𝓱𝐚ĆⓀ𝑒я | All rights reserved."
+   copyright = "𝓱𝐚ĆⓀ𝑒я &copy; 2024 | All rights reserved."
 
  [params.author]
    name = "V1c70r_n00b"
-   email = "mwaivictor04@gmail.com"
+   email = "v1c70r.n00b@gmail.com"
    image = "profile.png"
    imageQuality = 96
-   headline = "The IT guy"
+   headline = "Seccurity Analyst"
    bio = "Isaiah 6:8"
    links = [
-#     { email = "mailto:v1c70r.n00b@gmail.com" },
+     { email = "mailto:v1c70r.n00b@gmail.com" },
 #     { link = "https://link-to-some-website.com/" },
 #     { amazon = "https://www.amazon.com/hz/wishlist/ls/wishlist-id" },
 #     { apple = "https://www.apple.com" },
